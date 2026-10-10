@@ -75,6 +75,8 @@ ul.plain{padding-left:1.3em;margin:6px 0} ul.plain li{margin:6px 0}
 .silver{background:linear-gradient(135deg,#ffffff,#c9ccd6 45%,#8d92a3)}
 .saltpepper{background:radial-gradient(circle at 30% 35%,#111 0 4px,transparent 5px),radial-gradient(circle at 65% 60%,#111 0 5px,transparent 6px),radial-gradient(circle at 45% 75%,#333 0 3px,transparent 4px),#f4f4f4}
 .starry{background:radial-gradient(circle at 30% 30%,#fff 0 2px,transparent 3px),radial-gradient(circle at 70% 45%,#dfe3ee 0 3px,transparent 4px),radial-gradient(circle at 45% 72%,#fff 0 2px,transparent 3px),#111}
+.dough{background:radial-gradient(circle at 35% 35%,#fffdf7 0 8px,transparent 9px),radial-gradient(circle at 65% 65%,#efe6d4 0 10px,transparent 11px),#f7f1e3}
+.jelly{background:radial-gradient(circle at 32% 30%,rgba(255,255,255,.85) 0 5px,transparent 7px),radial-gradient(circle at 50% 55%,#c9a6f0,#8a5cc9 70%)}
 .custom{background:linear-gradient(135deg,#e6e0f5,#b9b0d6)}
 select{width:100%;font:inherit;font-size:1.05rem;padding:12px;min-height:56px;border:2px solid var(--line);border-radius:12px;background:#fff;color:var(--ink)}
 select:focus{outline:4px solid var(--focus);outline-offset:1px}
@@ -297,8 +299,49 @@ select:focus{outline:4px solid var(--focus);outline-offset:1px}
       "Wear gloves (black stains).",
       "Knead on a tray or parchment paper.",
       "Store sealed. Lotion or warm water if it gets stiff."
+    ] },
+    { id:"r4", num:"Recipe #4", name:"Boron-Free Glue Dough", sub:"No activator", sw:"dough", sections:[
+      ["Ingredients", [
+        "<span class='k'>Glue:</span> 1/2 cup Elmer's glue (white or clear).",
+        "<span class='k'>Cornstarch:</span> 1/2 cup, plus more as needed.",
+        "<span class='k'>Lotion:</span> 1–2 Tbsp.",
+        "<span class='k'>Color (optional):</span> your choice from the Colors tab."
+      ]],
+      ["Steps", [
+        "Pour the glue into a bowl and stir in the color.",
+        "Add the cornstarch a little at a time, stirring.",
+        "Knead in the lotion.",
+        "Keep adding cornstarch until it stops sticking to your hands."
+      ]]
+    ], notes:[
+      "Soft and moldable — more putty than stretchy.",
+      "No borax, no contact solution.",
+      "Best made fresh; store sealed.",
+      "Fragrance-free lotion is gentlest."
+    ] },
+    { id:"r5", num:"Recipe #5", name:"Psyllium Jelly Squish", sub:"Boron-free, glue-free", sw:"jelly", sections:[
+      ["Ingredients", [
+        "<span class='k'>Water:</span> 1 cup.",
+        "<span class='k'>Psyllium:</span> 1–2 tsp plain psyllium husk powder (fiber aisle).",
+        "<span class='k'>Color (optional):</span> 1–2 drops food coloring."
+      ]],
+      ["Steps", [
+        "Stir the water, psyllium and color together in a large microwave-safe bowl.",
+        "Microwave 3–5 minutes in short bursts, watching closely. Stop when it starts to bubble up.",
+        "Stir and repeat until thick.",
+        "Let it cool completely before touching — it gets very hot."
+      ]]
+    ], notes:[
+      "Heat longer for a firmer texture.",
+      "Jiggly and gentle on the hands.",
+      "Make fresh — it doesn't keep long.",
+      "Not food — don't eat it.",
+      "Throw it away in the trash, not the drain."
     ] }
   ];
+  // Custom (user-added) recipes are numbered after the built-ins, starting at #6.
+  // Display-only: stored data keeps its original ids/keys (custom ids are "c"+timestamp).
+  var CUSTOM_START = Math.max(6, RECIPES.length + 1);
 
   var COLORS = [
     ["White","#ffffff",["white acrylic","white air-dry clay","white mica","white eyeshadow","dab of white lotion"]],
@@ -353,7 +396,7 @@ select:focus{outline:4px solid var(--focus);outline-offset:1px}
     [["Base",c.base],["Color",c.color],["Activator",c.act],["Add-ins",c.add],["Scent",c.scent]].forEach(function(p){
       if (p[1] && p[1].trim()) items.push("<span class='k'>"+p[0]+":</span> "+esc(p[1]));
     });
-    return { id:c.id, num:"Recipe #"+(RECIPES.length+idx+1), name:c.name, sub:"My recipe", sw:"custom",
+    return { id:c.id, num:"Recipe #"+(CUSTOM_START+idx), name:c.name, sub:"My recipe", sw:"custom",
       sections: items.length ? [["Ingredients", items]] : [],
       notes: c.notes && c.notes.trim() ? [esc(c.notes).replace(/\n/g,'<br>')] : [] };
   }

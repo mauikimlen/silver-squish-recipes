@@ -25,8 +25,8 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,Bl
 header.top{position:sticky;top:0;z-index:10;background:linear-gradient(135deg,#3b2f63,#5a4b8f);color:#fff;padding:calc(env(safe-area-inset-top) + 10px) 14px 0;box-shadow:0 2px 8px rgba(0,0,0,.2)}
 .brand{display:flex;align-items:center;gap:10px;font-family:Georgia,"Times New Roman",serif;font-size:1.35rem;font-weight:700;padding-bottom:8px}
 .brand img{width:38px;height:38px;border-radius:10px;border:2px solid #fff}
-nav.tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:4px}
-nav.tabs button{appearance:none;border:0;background:transparent;color:#fff;font:inherit;font-size:.9rem;font-weight:700;line-height:1.2;padding:12px 4px 14px;min-height:56px;border-bottom:5px solid transparent;cursor:pointer}
+nav.tabs{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:2px}
+nav.tabs button{appearance:none;border:0;background:transparent;color:#fff;font:inherit;font-size:.85rem;font-weight:700;line-height:1.2;padding:12px 1px 14px;min-height:56px;overflow-wrap:anywhere;border-bottom:5px solid transparent;cursor:pointer}
 nav.tabs button[aria-selected="true"]{border-bottom-color:#e6e0f5;background:rgba(255,255,255,.14);border-radius:10px 10px 0 0}
 main{max-width:720px;margin:0 auto;padding:16px 14px calc(env(safe-area-inset-bottom) + 40px)}
 section.page{display:none} section.page.active{display:block}
@@ -76,6 +76,28 @@ ul.plain{padding-left:1.3em;margin:6px 0} ul.plain li{margin:6px 0}
 .saltpepper{background:radial-gradient(circle at 30% 35%,#111 0 4px,transparent 5px),radial-gradient(circle at 65% 60%,#111 0 5px,transparent 6px),radial-gradient(circle at 45% 75%,#333 0 3px,transparent 4px),#f4f4f4}
 .starry{background:radial-gradient(circle at 30% 30%,#fff 0 2px,transparent 3px),radial-gradient(circle at 70% 45%,#dfe3ee 0 3px,transparent 4px),radial-gradient(circle at 45% 72%,#fff 0 2px,transparent 3px),#111}
 .custom{background:linear-gradient(135deg,#e6e0f5,#b9b0d6)}
+select{width:100%;font:inherit;font-size:1.05rem;padding:12px;min-height:56px;border:2px solid var(--line);border-radius:12px;background:#fff;color:var(--ink)}
+select:focus{outline:4px solid var(--focus);outline-offset:1px}
+.shop{background:#fff;border:3px solid var(--deep);border-radius:18px;padding:14px 16px;margin-bottom:18px}
+.shop h2{color:var(--deep);margin-bottom:6px}
+.shop ul{list-style:none;margin:6px 0;padding:0}
+.shop li{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--lav2)}
+.shop li:last-child{border-bottom:0}
+.shop .empty{color:#2d6a3e;font-weight:700}
+.cat{margin:20px 0 8px;font-size:1.2rem;color:var(--deep);border-bottom:3px solid var(--lav2);padding-bottom:4px}
+.item{background:#fff;border:2px solid var(--line);border-radius:16px;padding:12px 14px;margin-bottom:10px}
+.item .nm{font-weight:700;font-size:1.1rem}
+.item .qty{color:var(--muted);font-size:1rem}
+.item .acts{display:flex;gap:10px;align-items:center;margin-top:10px;flex-wrap:wrap}
+.status{appearance:none;font:inherit;font-weight:700;font-size:1rem;border-radius:999px;padding:10px 16px;min-height:52px;cursor:pointer;border:3px solid}
+.st-in{background:#d9f2df;color:#14532d;border-color:#1f7a3f}
+.st-low{background:#fff0c2;color:#6b4300;border-color:#b07800}
+.st-out{background:#fde0e0;color:#7f1d1d;border-color:#b42323}
+.pill{display:inline-block;font-weight:700;font-size:.85rem;border-radius:999px;padding:4px 10px;border:2px solid;white-space:nowrap}
+.item .del{margin-left:auto;min-height:52px;padding:10px 14px;font-size:1rem}
+.emptycat{color:var(--muted);font-style:italic;margin:4px 0 8px}
+.linkbtn{appearance:none;background:none;border:0;color:var(--deep);text-decoration:underline;font:inherit;font-size:.95rem;padding:14px 8px;min-height:48px;cursor:pointer}
+.hint{color:var(--muted);font-size:.95rem}
 </style>
 </head>
 <body>
@@ -84,7 +106,8 @@ ul.plain{padding-left:1.3em;margin:6px 0} ul.plain li{margin:6px 0}
   <nav class="tabs" role="tablist" aria-label="Sections">
     <button role="tab" data-page="recipes" aria-selected="true">Recipes</button>
     <button role="tab" data-page="colors" aria-selected="false">Colors</button>
-    <button role="tab" data-page="scents" aria-selected="false">Scents &amp; Add-ins</button>
+    <button role="tab" data-page="scents" aria-selected="false">Add-ins</button>
+    <button role="tab" data-page="supplies" aria-selected="false">Supplies</button>
     <button role="tab" data-page="tips" aria-selected="false">Tips</button>
   </nav>
 </header>
@@ -148,6 +171,36 @@ ul.plain{padding-left:1.3em;margin:6px 0} ul.plain li{margin:6px 0}
     </ul>
     <p class="note">Chunky glitter sheds less than fine glitter.</p>
   </div>
+</section>
+
+<!-- SUPPLIES -->
+<section class="page" id="page-supplies">
+  <h1>My Supplies</h1>
+  <p class="intro">Tap the colored button on an item to change it: <span class="k">In stock</span> → <span class="k">Running low</span> → <span class="k">Out</span>. Anything low or out shows up on your shopping list. Saved on this phone.</p>
+
+  <div class="shop" id="shop">
+    <h2>🛒 Shopping list</h2>
+    <div id="shop-list"></div>
+    <div class="row"><button class="btn" id="copy-list" type="button">Copy list</button></div>
+    <div class="saved" id="copy-status" aria-live="polite"></div>
+  </div>
+
+  <div id="supply-list"></div>
+
+  <div class="card" id="add-supply-card">
+    <button class="head" aria-expanded="false"><span class="dot custom" style="display:flex;align-items:center;justify-content:center;font-size:1.8rem;color:#3b2f63;font-weight:700">+</span><span class="t"><span class="num">New</span><h2>Add item</h2></span><span class="chev" aria-hidden="true">⌄</span></button>
+    <div class="body formgrid">
+      <form id="supply-form">
+        <label for="s-name">Name</label><input type="text" id="s-name" required placeholder="e.g. Silver mica powder">
+        <label for="s-cat">Category</label><select id="s-cat"></select>
+        <label for="s-qty">Quantity / notes (optional)</label><input type="text" id="s-qty" placeholder="e.g. 2 bottles, 1 gallon">
+        <div class="row"><button class="btn" type="submit">Save item</button><button class="btn ghost" type="reset">Clear</button></div>
+        <div class="saved" id="supply-status" aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
+
+  <p style="text-align:center"><button class="linkbtn" id="reset-supplies" type="button">Reset to starter list</button></p>
 </section>
 
 <!-- TIPS -->
@@ -379,9 +432,124 @@ ul.plain{padding-left:1.3em;margin:6px 0} ul.plain li{margin:6px 0}
     window.scrollTo(0,0);
   }
 
+  // ---------- Supplies ----------
+  var SUP_KEY = 'supplies';
+  var CATS = ["Bases","Activators","Colors","Add-ins","Scents","Tools & Storage"];
+  var STATES = [
+    {k:"in",  label:"In stock",     cls:"st-in"},
+    {k:"low", label:"Running low",  cls:"st-low"},
+    {k:"out", label:"Out",          cls:"st-out"}
+  ];
+  function stateOf(k){ for (var i=0;i<STATES.length;i++) if (STATES[i].k===k) return STATES[i]; return STATES[0]; }
+  function starterSupplies(){
+    var n = 0, t = Date.now();
+    function it(name, cat){ n++; return {id:'s'+t+'-'+n, name:name, cat:cat, qty:'', status:'in'}; }
+    return [
+      it("Elmer's clear glue","Bases"), it("Elmer's white glue","Bases"), it("White air-dry clay","Bases"),
+      it("Borax","Activators"), it("Borax activator (40 oz jar)","Activators"),
+      it("Shaving cream","Add-ins"), it("Glitter","Add-ins"), it("Beads","Add-ins"), it("Charms","Add-ins")
+    ];
+  }
+  function loadSupplies(){
+    var raw = null;
+    try { raw = localStorage.getItem(NS+SUP_KEY); } catch(e){}
+    if (raw === null) { var s = starterSupplies(); set(SUP_KEY, s); return s; }
+    var v = get(SUP_KEY, []);
+    return Array.isArray(v) ? v : [];
+  }
+  var supplies = loadSupplies();
+  function saveSupplies(){ set(SUP_KEY, supplies); }
+  function shoppingItems(){ return supplies.filter(function(s){ return s.status==='low' || s.status==='out'; }); }
+  function renderSupplies(){
+    var shop = shoppingItems();
+    document.getElementById('shop-list').innerHTML = shop.length
+      ? '<ul>' + shop.map(function(s){ var st=stateOf(s.status);
+          return '<li><span>'+esc(s.name)+(s.qty?' <span class="hint">('+esc(s.qty)+')</span>':'')+'</span><span class="pill '+st.cls+'">'+st.label+'</span></li>'; }).join('') + '</ul>'
+      : '<p class="empty">Nothing to buy. Everything is in stock ✓</p>';
+    document.getElementById('copy-list').style.display = shop.length ? '' : 'none';
+    var html = '';
+    CATS.forEach(function(cat){
+      var items = supplies.filter(function(s){ return s.cat===cat; });
+      html += '<h2 class="cat">'+esc(cat)+'</h2>';
+      if (!items.length) { html += '<p class="emptycat">No items yet. Use “Add item” below.</p>'; return; }
+      items.forEach(function(s){
+        var st = stateOf(s.status);
+        html += '<div class="item"><div class="nm">'+esc(s.name)+'</div>'+(s.qty?'<div class="qty">'+esc(s.qty)+'</div>':'')+
+          '<div class="acts"><button type="button" class="status '+st.cls+'" data-sup-toggle="'+esc(s.id)+'" aria-label="'+esc(s.name)+': '+st.label+'. Tap to change.">'+st.label+'</button>'+
+          '<button type="button" class="btn danger del" data-sup-del="'+esc(s.id)+'" aria-label="Delete '+esc(s.name)+'">Delete</button></div></div>';
+      });
+    });
+    // any items with unknown category
+    var other = supplies.filter(function(s){ return CATS.indexOf(s.cat)<0; });
+    if (other.length) {
+      html += '<h2 class="cat">Other</h2>';
+      other.forEach(function(s){ var st=stateOf(s.status);
+        html += '<div class="item"><div class="nm">'+esc(s.name)+'</div>'+(s.qty?'<div class="qty">'+esc(s.qty)+'</div>':'')+
+          '<div class="acts"><button type="button" class="status '+st.cls+'" data-sup-toggle="'+esc(s.id)+'">'+st.label+'</button>'+
+          '<button type="button" class="btn danger del" data-sup-del="'+esc(s.id)+'">Delete</button></div></div>'; });
+    }
+    document.getElementById('supply-list').innerHTML = html;
+  }
+  document.getElementById('s-cat').innerHTML = CATS.map(function(c){ return '<option>'+esc(c)+'</option>'; }).join('');
+  function findSup(id){ for (var i=0;i<supplies.length;i++) if (supplies[i].id===id) return supplies[i]; return null; }
+  document.addEventListener('click', function(e){
+    var tg = e.target.closest('[data-sup-toggle]');
+    if (tg) {
+      var s = findSup(tg.dataset.supToggle); if (!s) return;
+      var order = ['in','low','out']; s.status = order[(order.indexOf(s.status)+1) % 3];
+      saveSupplies(); renderSupplies();
+      var b = document.querySelector('[data-sup-toggle="'+s.id+'"]'); if (b) b.focus();
+      return;
+    }
+    var dl = e.target.closest('[data-sup-del]');
+    if (dl) {
+      var d = findSup(dl.dataset.supDel); if (!d) return;
+      if (confirm('Delete "'+d.name+'" from your supplies?')) {
+        supplies = supplies.filter(function(x){ return x.id!==d.id; }); saveSupplies(); renderSupplies();
+      }
+      return;
+    }
+  });
+  document.getElementById('supply-form').addEventListener('submit', function(e){
+    e.preventDefault();
+    var name = document.getElementById('s-name').value.trim(); if (!name) return;
+    var cat = document.getElementById('s-cat').value;
+    supplies.push({ id:'s'+Date.now(), name:name, cat:cat, qty:document.getElementById('s-qty').value.trim(), status:'in' });
+    saveSupplies(); renderSupplies(); this.reset();
+    var st = document.getElementById('supply-status'); st.textContent = 'Added to ' + cat + ' ✓';
+    setTimeout(function(){ st.textContent=''; }, 2500);
+  });
+  function copyText(txt){
+    if (navigator.clipboard && window.isSecureContext) return navigator.clipboard.writeText(txt).catch(function(){ return legacyCopy(txt); });
+    return legacyCopy(txt);
+  }
+  function legacyCopy(txt){
+    return new Promise(function(res, rej){
+      var ta = document.createElement('textarea'); ta.value = txt; ta.setAttribute('readonly','');
+      ta.style.position='fixed'; ta.style.top='0'; ta.style.left='0'; ta.style.opacity='0';
+      document.body.appendChild(ta); ta.focus(); ta.select(); ta.setSelectionRange(0, txt.length);
+      var ok = false; try { ok = document.execCommand('copy'); } catch(err){}
+      document.body.removeChild(ta); ok ? res() : rej();
+    });
+  }
+  document.getElementById('copy-list').addEventListener('click', function(){
+    var shop = shoppingItems();
+    var txt = 'Squish shopping list\n' + shop.map(function(s){ return '- ' + s.name + (s.qty ? ' ('+s.qty+')' : '') + ' [' + stateOf(s.status).label + ']'; }).join('\n');
+    var st = document.getElementById('copy-status');
+    copyText(txt).then(function(){ st.textContent = 'Copied ✓ Paste it into Notes or a text.'; },
+                       function(){ st.textContent = 'Could not copy. Press and hold the list to copy it.'; });
+    setTimeout(function(){ st.textContent=''; }, 3000);
+  });
+  document.getElementById('reset-supplies').addEventListener('click', function(){
+    if (confirm('Reset to the starter list? This removes the items you added and marks everything In stock.')) {
+      supplies = starterSupplies(); saveSupplies(); renderSupplies();
+    }
+  });
+  renderSupplies();
+
   renderRecipes();
   var start = (location.hash||'').slice(1);
-  if (['recipes','colors','scents','tips'].indexOf(start) >= 0) showPage(start);
+  if (['recipes','colors','scents','supplies','tips'].indexOf(start) >= 0) showPage(start);
 })();
 </script>
 </body>

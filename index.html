@@ -51,6 +51,12 @@ ul.checks label{display:flex;gap:14px;align-items:flex-start;padding:10px 10px;b
 ul.checks input{flex:0 0 30px;width:30px;height:30px;margin-top:2px;accent-color:var(--deep)}
 ul.checks input:checked + span{text-decoration:line-through;color:#6b6680}
 .k{font-weight:700;color:var(--deep)}
+.card.basics{border-color:var(--deep);background:linear-gradient(180deg,#f3effc,#fff 90px)}
+.card.basics .head .num{color:var(--deep)}
+.card.basics{scroll-margin-top:var(--hdr,130px)}
+.dot.bam{background:radial-gradient(circle at 35% 30%,#fff,#e6e0f5 45%,#b9b0dc);display:flex;align-items:center;justify-content:center;font-size:1.5rem}
+a.bamlink{color:var(--deep);font-weight:700;text-decoration:underline;padding:2px 0}
+a.bamlink:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
 textarea,input[type=text]{width:100%;font:inherit;font-size:1.05rem;padding:12px;border:2px solid var(--line);border-radius:12px;background:#fff;color:var(--ink)}
 textarea{min-height:120px;resize:vertical}
 textarea:focus,input[type=text]:focus{outline:4px solid var(--focus);outline-offset:1px}
@@ -128,7 +134,7 @@ select:focus{outline:4px solid var(--focus);outline-offset:1px}
         <label for="f-name">Name</label><input type="text" id="f-name" required placeholder="e.g. Lavender Cloud Squish">
         <label for="f-base">Base</label><textarea id="f-base" placeholder="e.g. 1/2 cup Elmer's white glue + 1/4 cup water"></textarea>
         <label for="f-color">Color</label><textarea id="f-color" placeholder="e.g. pea-sized purple acrylic paint"></textarea>
-        <label for="f-act">Activator</label><textarea id="f-act" placeholder="e.g. 1 tsp borax in 1 cup warm water, add 1 tsp at a time"></textarea>
+        <label for="f-act">Activator</label><textarea id="f-act" placeholder="e.g. BAM, add 1 tsp at a time"></textarea>
         <label for="f-add">Add-ins</label><textarea id="f-add" placeholder="e.g. purple glitter, star charms"></textarea>
         <label for="f-scent">Scent</label><textarea id="f-scent" placeholder="e.g. 1 drop lavender"></textarea>
         <label for="f-notes">Notes</label><textarea id="f-notes" placeholder="How did it turn out? What would you change?"></textarea>
@@ -244,7 +250,25 @@ select:focus{outline:4px solid var(--focus);outline-offset:1px}
   function esc(s){ return String(s).replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
 
   // ---------- Data ----------
-  var ACT = "<span class='k'>Activator:</span> 1 tsp borax dissolved in 1 cup warm water (keep the extra in a labeled jar).";
+  var ACT = "<span class='k'>Activator:</span> <a href='#bam' class='bamlink' data-bam>BAM (Borax Activator Mix)</a> (keep the extra in a labeled jar).";
+  // Pinned, unnumbered Basics card. Kept out of RECIPES so custom numbering is unaffected.
+  var BAM = { id:"bam", num:"Basics", name:"BAM — Borax Activator Mix", sub:"Your go-to activator", sw:"bam", basics:true, sections:[
+      ["Ingredients", [
+        "<span class='k'>Small batch:</span> 1 tsp borax + 1 cup warm water.",
+        "<span class='k'>Big jar (40 oz):</span> 4 tsp borax + 4 cups warm water (leaves room to shake)."
+      ]],
+      ["Steps", [
+        "Warm the water (hot tap is fine).",
+        "Add borax and stir or shake until clear; a few settled grains are OK.",
+        "Let it cool, lid it, and label it 'BAM — Borax Activator, not for drinking'."
+      ]]
+    ], notes:[
+      "Shake before each use.",
+      "Add 1 tsp at a time to glue.",
+      "A 40 oz jar activates roughly a gallon of glue (~30 batches of 1/2 cup). Clear glue needs a bit more than white.",
+      "Store away from kids and pets.",
+      "Wear gloves; stop if skin gets red or itchy."
+    ] };
   var RECIPES = [
     { id:"r1", num:"Recipe #1", name:"Silver Squish", sub:"Clear glue", sw:"silver", sections:[
       ["Ingredients", [
@@ -256,7 +280,7 @@ select:focus{outline:4px solid var(--focus);outline-offset:1px}
       ]],
       ["Steps", [
         "Mix the base and stir in the color.",
-        "Add borax water 1 tsp at a time, stirring, until it pulls away from the bowl.",
+        "Add BAM 1 tsp at a time, stirring, until it pulls away from the bowl.",
         "Knead. If still sticky, add a few more drops, slowly (too much = stiff and rubbery).",
         "Knead in beads; set charms on top for the camera."
       ]]
@@ -383,8 +407,8 @@ select:focus{outline:4px solid var(--focus);outline-offset:1px}
       '<div class="row"><button class="btn ghost" data-reset="'+rid+'">Uncheck all</button></div>';
   }
   function card(r, custom){
-    var html = '<div class="card" data-id="'+r.id+'"><button class="head" aria-expanded="false">'+
-      '<span class="dot '+r.sw+'"></span><span class="t"><span class="num">'+esc(r.num)+'</span><h2>'+esc(r.name)+'</h2>'+(r.sub?'<span style="color:#4a4560">'+esc(r.sub)+'</span>':'')+'</span><span class="chev" aria-hidden="true">⌄</span></button><div class="body">';
+    var html = '<div class="card'+(r.basics?' basics':'')+'" data-id="'+r.id+'"'+(r.basics?' id="bam"':'')+'><button class="head" aria-expanded="false">'+
+      '<span class="dot '+r.sw+'"'+(r.basics?' aria-hidden="true">🫙':'>')+'</span><span class="t"><span class="num">'+esc(r.num)+'</span><h2>'+esc(r.name)+'</h2>'+(r.sub?'<span style="color:#4a4560">'+esc(r.sub)+'</span>':'')+'</span><span class="chev" aria-hidden="true">⌄</span></button><div class="body">';
     r.sections.forEach(function(s){ html += '<h3>'+s[0]+'</h3>' + checklist(r.id, s[0], s[1]); });
     if (r.notes && r.notes.length) html += '<h3>Notes &amp; tips</h3><ul class="plain">' + r.notes.map(function(n){return '<li>'+n+'</li>';}).join('') + '</ul>';
     html += notesBox(r.id);
@@ -402,7 +426,7 @@ select:focus{outline:4px solid var(--focus);outline-offset:1px}
   }
   function renderRecipes(openId){
     var customs = get('custom', []);
-    var html = RECIPES.map(function(r){ return card(r,false); }).join('') +
+    var html = card(BAM,false) + RECIPES.map(function(r){ return card(r,false); }).join('') +
                customs.map(function(c,i){ return card(customToRecipe(c,i), true); }).join('');
     document.getElementById('recipe-list').innerHTML = html;
     if (openId) { var el = document.querySelector('.card[data-id="'+openId+'"]'); if (el) toggle(el, true); }
@@ -425,6 +449,14 @@ select:focus{outline:4px solid var(--focus);outline-offset:1px}
     cardEl.querySelector('button.head').setAttribute('aria-expanded', open);
   }
   document.addEventListener('click', function(e){
+    var bl = e.target.closest('a[data-bam]');
+    if (bl) {
+      e.preventDefault(); e.stopPropagation();
+      var bc = document.querySelector('.card[data-id="bam"]');
+      var hd = document.querySelector('header'); if (hd) document.documentElement.style.setProperty('--hdr', (hd.offsetHeight+10)+'px');
+      if (bc) { toggle(bc, true); bc.scrollIntoView({behavior:'smooth', block:'start'}); bc.querySelector('button.head').focus({preventScroll:true}); }
+      return;
+    }
     var head = e.target.closest('button.head');
     if (head) { toggle(head.parentNode); return; }
     var tab = e.target.closest('nav.tabs button');
@@ -489,7 +521,7 @@ select:focus{outline:4px solid var(--focus);outline-offset:1px}
     function it(name, cat){ n++; return {id:'s'+t+'-'+n, name:name, cat:cat, qty:'', status:'in'}; }
     return [
       it("Elmer's clear glue","Bases"), it("Elmer's white glue","Bases"), it("White air-dry clay","Bases"),
-      it("Borax","Activators"), it("Borax activator (40 oz jar)","Activators"),
+      it("Borax","Activators"), it("BAM (40 oz jar)","Activators"),
       it("Shaving cream","Add-ins"), it("Glitter","Add-ins"), it("Beads","Add-ins"), it("Charms","Add-ins")
     ];
   }
@@ -498,7 +530,12 @@ select:focus{outline:4px solid var(--focus);outline-offset:1px}
     try { raw = localStorage.getItem(NS+SUP_KEY); } catch(e){}
     if (raw === null) { var s = starterSupplies(); set(SUP_KEY, s); return s; }
     var v = get(SUP_KEY, []);
-    return Array.isArray(v) ? v : [];
+    if (!Array.isArray(v)) return [];
+    // Migrate old starter name to BAM, keeping status/qty/id.
+    var migrated = false;
+    v.forEach(function(s){ if (s && s.name === 'Borax activator (40 oz jar)') { s.name = 'BAM (40 oz jar)'; migrated = true; } });
+    if (migrated) set(SUP_KEY, v);
+    return v;
   }
   var supplies = loadSupplies();
   function saveSupplies(){ set(SUP_KEY, supplies); }

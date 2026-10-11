@@ -181,6 +181,80 @@ input[type=text]{min-height:56px}
 .needs li:last-child{border-bottom:0}
 .needs .big{font-size:1.15rem}
 .needs .sm{display:block;color:var(--muted);font-size:.95rem}
+/* ---- Batch 3: backup & restore, featured promo ---- */
+.backupbox{background:#fff;border:3px solid var(--brown);border-radius:18px;padding:16px;margin:0 0 18px;box-shadow:inset 0 6px 0 var(--avocado),0 3px 0 rgba(59,35,20,.18)}
+.backupbox h2{color:var(--plum);margin:6px 0 4px}
+.backupbox .last{font-weight:700;color:var(--brown);margin:10px 0 0}
+.backupbox .row .btn{flex:1 1 220px}
+.bkmsg{font-size:1rem;font-weight:700;min-height:1.2em;margin-top:10px;color:var(--brown)}
+.bkmsg.ok{color:#4F5A26}
+.bkmsg.err{color:#A3311A}
+.remind{background:#FDEBC0;border:2px solid var(--mustard);border-left:8px solid var(--avocado);border-radius:12px;padding:12px 14px;margin:0 0 16px;display:flex;gap:12px;align-items:flex-start}
+.remind .ic{font-size:1.6rem;line-height:1.2}
+.remind .linkbtn{padding:12px 4px;font-size:1rem;font-weight:700}
+.bksum{background:#FFFBF2;border:3px solid var(--orange);border-radius:16px;padding:6px 14px 14px;margin:14px 0 0}
+.bksum h3{margin-top:10px}
+.bksum ul{list-style:none;padding:0;margin:6px 0}
+.bksum li{padding:6px 0;border-bottom:1px solid var(--lav2)}
+.bksum li:last-child{border-bottom:0}
+.bksum .q{font-weight:700;color:var(--brown);margin:12px 0 4px}
+.featured{background:#fff;border:3px solid var(--brown);border-radius:18px;padding:14px 16px 16px;margin:0 0 18px;box-shadow:inset 0 6px 0 var(--mustard),0 3px 0 rgba(59,35,20,.18)}
+.featured .kicker{display:inline-block;background:var(--mustard);color:var(--brown);border:2px solid var(--brown);border-radius:999px;padding:0 12px;font-weight:700;font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;margin-top:6px}
+.featured h2{color:var(--plum);margin:8px 0 0;font-size:1.4rem}
+.featured .when{color:var(--muted);margin:2px 0 12px;font-weight:700}
+.featured video{display:block;width:100%;max-width:100%;height:auto;aspect-ratio:9/16;border-radius:16px;border:3px solid var(--brown);background:#3B2314}
+.featured .posterlink{display:block;margin-top:16px;border-radius:16px}
+.featured .posterlink img{display:block;width:100%;max-width:100%;height:auto;border-radius:16px;border:3px solid var(--brown)}
+.featured .posterlink:focus-visible{outline:4px solid var(--focus);outline-offset:3px}
+.featured .cap{text-align:center;margin:10px 0 0;font-size:1.05rem}
+.featured .cap a{display:inline-block;color:var(--plum);font-weight:700;text-decoration:underline;padding:14px 4px;min-height:56px}
+.featured .hint{text-align:center;margin:4px 0 0}
+.zoom{position:fixed;inset:0;z-index:50;background:rgba(59,35,20,.94);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:calc(env(safe-area-inset-top) + 12px) 12px calc(env(safe-area-inset-bottom) + 12px)}
+.zoom img{max-width:100%;max-height:calc(100% - 80px);border-radius:12px;object-fit:contain}
+.zoom .btn{margin-top:14px}
+/* ---- Batch 3b ---- */
+.ideasfoot{text-align:center;margin:24px 0 8px}
+.ideasbox{scroll-margin-top:var(--hdr,130px)}
+.copynote{background:#FDEBC0;border:2px solid var(--mustard);border-radius:12px;padding:10px 12px;margin:8px 0;font-weight:700;color:var(--brown)}
+.calcline{background:#FFFBF2;border:2px dashed var(--mustard);border-radius:12px;padding:8px 12px;margin:12px 0 0;font-size:1rem}
+fieldset.basepick,fieldset.calcset{border:2px solid var(--lav2);border-radius:14px;margin:14px 0 4px;padding:6px 12px 10px;min-width:0}
+fieldset.basepick legend,fieldset.calcset legend{font-weight:700;color:var(--brown);padding:0 6px}
+.basepick ul.checks{margin-top:6px}
+.needs h3.needsub{font-size:1.05rem;color:var(--plum);margin:14px 0 2px;border-bottom:2px solid var(--lav2);padding-bottom:2px}
+.promo{border-top:3px dashed var(--mustard);margin-top:18px;padding-top:4px}
+.mgrid,.ggrid{list-style:none;margin:12px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.mgrid:empty{display:none}
+.mtile,.gtile{background:#FFFBF2;border:2px solid var(--lav2);border-radius:14px;padding:8px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.mthumb{appearance:none;position:relative;display:block;width:100%;aspect-ratio:1/1;min-height:56px;padding:0;border:3px solid var(--brown);border-radius:12px;overflow:hidden;background:var(--lav);cursor:pointer}
+.mthumb img{display:block;width:100%;height:100%;object-fit:cover}
+.mthumb:focus-visible{outline:4px solid var(--focus);outline-offset:2px}
+.mthumb .mplay{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:52px;height:52px;border-radius:50%;background:rgba(59,35,20,.85);color:#FFF6E5;display:flex;align-items:center;justify-content:center;font-size:1.4rem;border:2px solid #FFF6E5;padding-left:4px}
+.mthumb .mph{display:flex;width:100%;height:100%;align-items:center;justify-content:center;font-size:2.4rem;background:var(--lav2)}
+.msize{font-size:.9rem;color:var(--muted);font-weight:700}
+.msize.big{color:#A3311A}
+.mcaplbl{font-size:.9rem;font-weight:700;color:var(--brown)}
+.mtile input[type=text]{font-size:1rem;padding:10px}
+.mtile .btn{width:100%;padding:10px;font-size:1rem}
+.glabel{font-size:.95rem;line-height:1.35;color:var(--brown)}
+.glabel .gd{display:block;color:var(--muted);font-size:.9rem}
+.gcap{font-size:.95rem;color:var(--ink);overflow-wrap:anywhere}
+.zoom video{max-width:100%;max-height:calc(100% - 140px);border-radius:12px;background:#000}
+.zcap{color:#FFF6E5;text-align:center;margin:10px 0 0;font-size:1.05rem;max-width:600px}
+/* ---- Batch 3c ---- */
+.featured .editedtag{margin-top:12px}
+.featured .editform{margin-top:12px}
+.mcapview{display:flex;flex-direction:column;gap:6px}
+.mcapview .gcap{margin:0;font-weight:700;color:var(--brown)}
+.mcapview .nocap{margin:0;color:var(--muted);font-size:.9rem}
+.mcapform{display:flex;flex-direction:column;gap:6px}
+.mcapform .row{margin-top:0;gap:6px}
+.mcapform .row .btn{flex:1 1 0;min-width:0}
+.zoom .zbar{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:14px}
+.zoom .zbar .btn{margin-top:0}
+.zoom .zedit{width:100%;max-width:520px;margin-top:12px;display:flex;flex-direction:column;gap:8px}
+.zoom .zedit label{color:#FFF6E5;font-weight:700}
+.zoom .zedit .row{justify-content:center;margin-top:0}
+.glabel .gsub{display:block;color:var(--muted);font-size:.9rem}
 </style>
 </head>
 <body>
@@ -202,6 +276,11 @@ input[type=text]{min-height:56px}
 <section class="page active" id="page-recipes">
   <h1>My Squish Book</h1>
   <p class="intro">Tap a recipe to open it. Check things off as you go. Tap <span class="k">✏️ Edit recipe</span> to change one. Your checkmarks, notes and changes are saved on this phone.</p>
+  <div id="base-list"></div>
+  <div class="card base" id="add-base-card">
+    <button class="head" aria-expanded="false"><span class="dot custom" style="display:flex;align-items:center;justify-content:center;font-size:1.8rem;color:#3B2314;font-weight:700">+</span><span class="t"><span class="num">New</span><h2>Add a base</h2><span class="sub">Your own starting squish</span></span><span class="chev" aria-hidden="true">⌄</span></button>
+    <div class="body formgrid" id="add-base-body"></div>
+  </div>
   <div id="recipe-list"></div>
 
   <div class="card" id="add-card">
@@ -222,7 +301,7 @@ input[type=text]{min-height:56px}
     </div>
   </div>
   <div id="bam-slot"></div>
-  <p style="text-align:center;margin-top:8px"><a href="#ideas" class="bamlink ideaslink" data-ideas>Have an idea? Jot it in My ideas</a></p>
+  <p class="ideasfoot"><a href="#ideas" class="bamlink ideaslink" data-ideas>Have an idea? Jot it in My ideas</a></p>
 </section>
 
 <!-- COLORS -->
@@ -241,15 +320,12 @@ input[type=text]{min-height:56px}
     <p>Tap <span class="k">✏️ Edit</span> on any color to change it.</p>
   </div>
   <div id="color-list"></div>
+  <p class="ideasfoot"><a href="#ideas" class="bamlink ideaslink" data-ideas>Have an idea? Jot it in My ideas</a></p>
 </section>
 
 <!-- SCENTS -->
 <section class="page" id="page-scents">
   <h1>Scents &amp; Add-ins</h1>
-  <div class="intro">
-    <p><span class="k">Scent:</span> a few drops of kitchen extract, or 1–2 drops of essential or fragrance oil per batch. Keep it light.</p>
-    <p>Add scent <span class="k">after</span> the squish forms. Patch-test oils on a small spot of skin first.</p>
-  </div>
   <div id="scent-list"></div>
   <h3>Household crunch</h3>
   <div class="colorrow">
@@ -260,6 +336,12 @@ input[type=text]{min-height:56px}
     </ul>
     <p class="note">Chunky glitter sheds less than fine glitter.</p>
   </div>
+  <h3>Scent tips</h3>
+  <div class="intro" id="scent-tips">
+    <p><span class="k">Scent:</span> a few drops of kitchen extract, or 1–2 drops of essential or fragrance oil per batch. Keep it light.</p>
+    <p>Add scent <span class="k">after</span> the squish forms. Patch-test oils on a small spot of skin first.</p>
+  </div>
+  <p class="ideasfoot"><a href="#ideas" class="bamlink ideaslink" data-ideas>Have an idea? Jot it in My ideas</a></p>
 </section>
 
 <!-- SUPPLIES -->
@@ -291,23 +373,56 @@ input[type=text]{min-height:56px}
     </div>
   </div>
 
-  <p style="text-align:center"><button class="linkbtn" id="reset-supplies" type="button">Reset to starter list</button></p>
+  <p class="ideasfoot"><a href="#ideas" class="bamlink ideaslink" data-ideas>Have an idea? Jot it in My ideas</a></p>
 </section>
 
 <!-- EVENTS -->
 <section class="page" id="page-events">
   <h1>Events</h1>
+  <div class="featured" id="featured" aria-labelledby="featured-title">
+    <span class="kicker">Featured</span>
+    <h2 id="featured-title">Our last squish party</h2>
+    <p class="when" id="featured-when">Saturday, Oct 10, 2026</p>
+    <video controls playsinline preload="none" poster="media/promo-reel-poster.jpg" id="featured-video" aria-label="Promo video: Our last squish party">
+      <source src="media/promo-reel.mp4" type="video/mp4">
+    </video>
+    <a href="media/promo-poster.jpg" class="posterlink" id="poster-link" target="_blank" rel="noopener"><img src="media/promo-poster.jpg" alt="Silver Squish party poster: guests stretching and decorating their squish. Book a squish party." loading="lazy" width="1200" height="1500"></a>
+    <p class="hint">Tap the poster to see it full size.</p>
+    <p class="cap" id="featured-cap">Book a squish party · <a href="https://facebook.com/silversquish" target="_blank" rel="noopener">facebook.com/silversquish</a></p>
+    <div id="featured-edited"></div>
+    <div class="row" id="featured-editrow"><button type="button" class="btn ghost" id="featured-edit">✏️ Edit</button></div>
+    <div class="saved" id="featured-msg" aria-live="polite"></div>
+    <div id="featured-form"></div>
+  </div>
+  <div class="card gallery" id="gallery-card">
+    <button class="head" aria-expanded="false"><span class="dot evdot" aria-hidden="true">🖼️</span><span class="t"><span class="num">All promo photos &amp; videos</span><h2>Gallery</h2><span class="sub" id="gallery-count"></span></span><span class="chev" aria-hidden="true">⌄</span></button>
+    <div class="body"><p class="hint">Newest first. Tap any photo or video to view it. Add more in the Promo section of each event.</p><ul class="ggrid" id="gallery-grid"></ul></div>
+  </div>
   <p class="intro">Plan your squish parties and classes. Add the group size and your Squish Book works out what to bring. Upcoming and past events sort themselves by date. Saved on this phone.</p>
   <div class="card" id="add-event-card">
     <button class="head" aria-expanded="false"><span class="dot custom" style="display:flex;align-items:center;justify-content:center;font-size:1.8rem;color:#3B2314;font-weight:700">+</span><span class="t"><span class="num">New</span><h2>Add an event</h2></span><span class="chev" aria-hidden="true">⌄</span></button>
     <div class="body formgrid" id="add-event-body"></div>
   </div>
   <div id="event-list"></div>
+  <p class="ideasfoot"><a href="#ideas" class="bamlink ideaslink" data-ideas>Have an idea? Jot it in My ideas</a></p>
 </section>
 
 <!-- TIPS -->
 <section class="page" id="page-tips">
   <h1>Tips &amp; Safety</h1>
+  <div class="remind" id="backup-remind" hidden role="status"><span class="ic" aria-hidden="true">💾</span><div><span id="backup-remind-text">It's been a while since your last backup.</span> <button class="linkbtn" type="button" id="backup-remind-go">Back up now</button></div></div>
+  <div class="backupbox" id="backup">
+    <h2>💾 Back up my Squish Book</h2>
+    <p class="hint">Your notes and changes are saved only on this phone, inside this app. Back up after big changes. Use the home-screen app, not Safari, so everything stays in one place.</p>
+    <p class="last" id="backup-last">Last backup: never</p>
+    <div class="row">
+      <button class="btn" id="backup-now" type="button">Back up now</button>
+      <button class="btn ghost" id="backup-restore" type="button">Restore from backup</button>
+    </div>
+    <input type="file" id="backup-file" class="photoinput" accept=".json,application/json" tabindex="-1" aria-hidden="true">
+    <div class="bkmsg" id="backup-msg" aria-live="polite"></div>
+    <div id="backup-summary"></div>
+  </div>
   <div class="ideasbox" id="ideas">
     <h2><label for="ideas-text">💡 My ideas &amp; changes to request</label></h2>
     <p class="hint">Jot down anything you'd like added or changed in your Squish Book. Saved on this phone. Tap "Copy all" to paste it into a message.</p>
@@ -323,6 +438,7 @@ input[type=text]{min-height:56px}
   <div class="tipcard"><span class="ic">🗑️</span><div>When you're done with a batch, put it in the trash. Never down the drain.</div></div>
   <div class="tipcard"><span class="ic">☁️</span><div>Save shaving cream for future fluffy squishes. Air-dry clay makes butter squishes, like Recipe #2.</div></div>
   <p class="tags">#silversquish #squish #slime #slimeASMR</p>
+  <p class="ideasfoot"><a href="#ideas" class="bamlink ideaslink" data-ideas>Have an idea? Jot it in My ideas</a></p>
 </section>
 </main>
 
@@ -471,11 +587,10 @@ input[type=text]{min-height:56px}
     { id:"base-clear", num:"Base", name:"Clear Base", sub:"Glassy and see-through", sw:"clearbase", base:true, sections:[
       ["Ingredients", [
         "<span class='k'>Glue:</span> 1/2 cup Elmer's clear glue.",
-        "<span class='k'>Water:</span> 1/4 cup.",
-        ACT
+        "<span class='k'>Activator:</span> "+BAMLINK
       ]],
       ["Steps", [
-        "Stir the glue and water together.",
+        "Stir the glue and "+BAMLINK+" together.",
         "Add "+BAMLINK+" 1 tsp at a time, stirring, until it pulls away from the bowl.",
         "Knead until smooth."
       ]]
@@ -486,11 +601,10 @@ input[type=text]{min-height:56px}
     { id:"base-white", num:"Base", name:"White Base", sub:"Smooth and opaque", sw:"whitebase", base:true, sections:[
       ["Ingredients", [
         "<span class='k'>Glue:</span> 1/2 cup Elmer's white glue.",
-        "<span class='k'>Water:</span> 1/4 cup.",
-        ACT
+        "<span class='k'>Activator:</span> Start with 2 Tbsp "+BAMLINK
       ]],
       ["Steps", [
-        "Stir the glue and water together.",
+        "Stir the glue and "+BAMLINK+" together.",
         "Add "+BAMLINK+" 1 tsp at a time, stirring, until it pulls away from the bowl.",
         "Knead until smooth."
       ]]
@@ -500,13 +614,14 @@ input[type=text]{min-height:56px}
     ] },
     { id:"base-butter", num:"Base", name:"Butter Base", sub:"Glue + clay", sw:"butterbase", base:true, sections:[
       ["Ingredients", [
-        "<span class='k'>Base:</span> one batch of White Base (above).",
+        "<span class='k'>Base:</span> one batch of White Base",
         "<span class='k'>Clay:</span> golf-ball-sized lump of white air-dry clay.",
-        ACT
+        "<span class='k'>Activator:</span> "+BAMLINK
       ]],
       ["Steps", [
-        "Make the White Base (glue + water + "+BAMLINK+").",
-        "Knead in the clay bit by bit until soft and spreadable."
+        "Make the White Base",
+        "Knead in the clay bit by bit until soft and spreadable",
+        "Add more "+BAMLINK+" as needed"
       ]]
     ], notes:[
       "Keep it sealed — clay dries fast.",
@@ -516,11 +631,11 @@ input[type=text]{min-height:56px}
       ["Ingredients", [
         "<span class='k'>Glue:</span> 1/2 cup Elmer's white glue.",
         "<span class='k'>Shaving cream:</span> 1 to 2 cups.",
-        ACT
+        "<span class='k'>Activator:</span> "+BAMLINK
       ]],
       ["Steps", [
         "Gently fold the shaving cream into the glue.",
-        "Add "+BAMLINK+" 1 tsp at a time, stirring.",
+        "Add "+BAMLINK+" 1 tsp at a time, stirring as needed.",
         "Knead."
       ]]
     ], notes:[
@@ -564,6 +679,53 @@ input[type=text]{min-height:56px}
   // Custom (user-added) recipes are numbered after the built-ins, starting at #6.
   // Display-only: stored data keeps its original ids/keys (custom ids are "c"+timestamp).
   var CUSTOM_START = Math.max(6, RECIPES.length + 1);
+  // ---------- My bases, copies (Batch 3b) ----------
+  // localStorage "silversquish:customBases" = [{id:"b<ts>", name, sub, base, color, act, add, scent, steps, notes, ing?, calc:{glue, glueCups, bamTbsp, clayOz, shaveCups}}]
+  // Copies of built-in cards are normal custom recipes with an "ing" field (ingredient lines, plain text).
+  var CB_KEY = 'customBases';
+  function listKey(kind){ return kind === 'cbase' ? CB_KEY : 'custom'; }
+  function getList(kind){ var l = get(listKey(kind), []); return Array.isArray(l) ? l : []; }
+  function calcFields(p, a){
+    a = a || {};
+    function num(n, label, val, ph, step){ return '<label for="'+p+n+'">'+label+'</label><input type="number" id="'+p+n+'" name="'+n+'" min="0" step="'+step+'" inputmode="decimal" value="'+(val == null ? '' : esc(val))+'" placeholder="'+ph+'">'; }
+    return '<fieldset class="calcset"><legend>For the Events calculator <span class="fhint">Amounts for one batch. Leave blank to use the White Base amounts.</span></legend>'+
+      '<label for="'+p+'calc_glue">Glue type</label><select id="'+p+'calc_glue" name="calc_glue"><option value="white">White glue</option><option value="clear"'+(a.glue === 'clear' ? ' selected' : '')+'>Clear glue</option></select>'+
+      num('calc_glueCups', 'Glue (cups)', a.glueCups, 'e.g. 0.5', '0.25') + num('calc_bam', 'BAM (Tbsp)', a.bamTbsp, 'e.g. 2', '0.5') +
+      num('calc_clay', 'Air-dry clay (oz)', a.clayOz, 'e.g. 0', '0.5') + num('calc_shave', 'Shaving cream (cups)', a.shaveCups, 'e.g. 0', '0.5') + '</fieldset>';
+  }
+  function readCalc(f){
+    function n(k){ var el = f.elements[k]; if (!el || el.value === '') return null; var x = parseFloat(el.value); return (isFinite(x) && x >= 0) ? x : null; }
+    return { glue:(f.elements.calc_glue && f.elements.calc_glue.value === 'clear') ? 'clear' : 'white', glueCups:n('calc_glueCups'), bamTbsp:n('calc_bam'), clayOz:n('calc_clay'), shaveCups:n('calc_shave') };
+  }
+  function addBaseFormHtml(){
+    var p = 'nb-';
+    return '<form id="add-base-form">' + fld(p+'name','name','Name','',{req:true}) + fld(p+'sub','sub','Short description (optional)','') +
+      fld(p+'base','base','Base','',{area:true}) + fld(p+'color','color','Color','',{area:true}) + fld(p+'act','act','Activator','',{area:true}) +
+      fld(p+'add','add','Add-ins','',{area:true}) + fld(p+'scent','scent','Scent','',{area:true}) + fld(p+'steps','steps','Steps (optional)','',{area:true,hint:ONE}) +
+      fld(p+'notes','notes','Notes','',{area:true}) + calcFields(p, {}) +
+      '<div class="row"><button class="btn" type="submit">Save base</button><button class="btn ghost" type="reset">Clear</button></div>' +
+      '<div class="saved" id="add-base-status" aria-live="polite"></div></form>';
+  }
+  function copyCard(id, kind){
+    var nc, toKind = 'custom';
+    if (kind === 'recipe') {
+      var b = findBuiltin(id); if (!b || b.basics) return;
+      var r = applyEdit(b);
+      nc = { name:r.name + ' (copy)', sub:r.sub || '', ing:secItems(r,'Ingredients').map(htmlToText).join('\n'),
+        base:'', color:'', act:'', add:'', scent:'', steps:secItems(r,'Steps').map(htmlToText).join('\n'), notes:(r.notes||[]).map(htmlToText).join('\n'), copiedFrom:id };
+    } else {
+      var list = getList(kind), i = customIndex(list, id); if (i < 0) return;
+      nc = JSON.parse(JSON.stringify(list[i])); nc.name = ((nc.name && String(nc.name).trim()) || 'My recipe') + ' (copy)'; nc.copiedFrom = id; toKind = kind;
+    }
+    nc.id = (toKind === 'cbase' ? 'b' : 'c') + Date.now();
+    var l2 = getList(toKind); l2.push(nc); set(listKey(toKind), l2);
+    renderRecipes(nc.id);
+    if (toKind === 'cbase') { refreshBasePickers(); renderEvents(); }
+    openEdit(nc.id, toKind);
+    var host = hostOf(nc.id), h3 = host && host.querySelector('.editwrap form h3');
+    var label = toKind === 'cbase' ? 'base' : 'Recipe #' + (CUSTOM_START + l2.length - 1);
+    if (h3) h3.insertAdjacentHTML('afterend', '<p class="copynote" role="status">📄 Copied! This is your new ' + esc(label) + '. Change anything, then tap Save changes.</p>');
+  }
 
   var COLORS = [
     ["White","#ffffff",["white acrylic","white air-dry clay","white mica","white eyeshadow","dab of white lotion"]],
@@ -612,9 +774,18 @@ input[type=text]{min-height:56px}
   var BUILTINS = [BAM].concat(BASES, RECIPES);
   function findBuiltin(id){ for (var i=0;i<BUILTINS.length;i++) if (BUILTINS[i].id === id) return BUILTINS[i]; return null; }
   function secItems(r, title){ for (var i=0;i<(r.sections||[]).length;i++) if (r.sections[i][0] === title) return r.sections[i][1]; return []; }
+  // An override whose text matches the built-in default (e.g. after a default was updated to match it) counts as not edited.
+  function sameAsDefault(b, o){
+    var nm = (typeof o.name === 'string' && o.name.trim()) ? o.name : b.name;
+    var sb = typeof o.sub === 'string' ? o.sub : (b.sub || '');
+    function L(k, t){ return Array.isArray(o[k]) ? o[k].map(function(x){ return String(x).trim(); }) : t; }
+    var ing = secItems(b,'Ingredients').map(htmlToText), st = secItems(b,'Steps').map(htmlToText), nt = (b.notes||[]).map(htmlToText);
+    return nm === b.name && sb === (b.sub||'') && sameList(L('ingredients', ing), ing) && sameList(L('steps', st), st) && sameList(L('notes', nt), nt);
+  }
   function applyEdit(r){
     var o = getEdits()[r.id];
     if (!o || typeof o !== 'object') return r;
+    if (sameAsDefault(r, o)) return r;
     var out = {}; for (var k in r) out[k] = r[k];
     var noLink = r.id === 'bam';
     if (typeof o.name === 'string' && o.name.trim()) out.name = o.name;
@@ -660,43 +831,45 @@ input[type=text]{min-height:56px}
       '<div class="saved" data-saved="'+rid+'" aria-live="polite"></div>'+
       '<div class="row"><button class="btn ghost" data-reset="'+rid+'">Uncheck all</button></div>';
   }
-  function card(r, custom){
-    var photo = !r.basics;
+  function card(r, kind){
+    kind = kind === true ? 'custom' : (kind || 'recipe');
+    var custom = kind === 'custom' || kind === 'cbase', photo = !r.basics;
     var html = '<div class="card'+(r.basics?' basics':'')+(r.base?' base':'')+'" data-id="'+r.id+'" data-edit-host="'+esc(r.id)+'"'+(r.basics?' id="bam"':'')+'><button class="head" aria-expanded="false">'+
       '<span class="dot '+r.sw+'"'+(r.basics?' aria-hidden="true">🫙':' data-dot="'+esc(r.id)+'">'+(photo?dotPhoto(r.id):''))+'</span><span class="t"><span class="num">'+esc(r.num)+'</span><h2>'+esc(r.name)+'</h2>'+(r.sub?'<span class="sub">'+esc(r.sub)+'</span>':'')+'</span><span class="chev" aria-hidden="true">⌄</span></button><div class="body"><div class="view">';
-    html += '<div class="row editrow"><button type="button" class="btn ghost" data-edit="'+esc(r.id)+'" data-kind="'+(custom?'custom':'recipe')+'">✏️ Edit recipe</button></div>';
+    html += '<div class="row editrow"><button type="button" class="btn ghost" data-edit="'+esc(r.id)+'" data-kind="'+kind+'">✏️ Edit '+(kind==='cbase'?'base':'recipe')+'</button>'+
+      (r.basics ? '' : '<button type="button" class="btn ghost" data-copy="'+esc(r.id)+'" data-kind="'+kind+'" aria-label="Make a copy of '+esc(r.name)+'">📄 Copy</button>')+'</div>';
     if (r.edited) html += '<p class="editedtag">✏️ You edited this recipe. <button type="button" class="linkbtn" data-revert="'+esc(r.id)+'" data-kind="recipe">Reset to original</button></p>';
     html += '<div class="saved" data-edit-msg="'+esc(r.id)+'" aria-live="polite"></div>';
+    if (kind === 'cbase') { var bs = baseSpec(r.id); if (bs) html += '<p class="calcline"><span class="k">For Events, per batch:</span> '+esc(perBatchText(bs))+'</p>'; }
     if (photo) html += photoBlock(r.id, r.name);
     r.sections.forEach(function(s){ html += '<h3>'+s[0]+'</h3>' + checklist(r.id, s[0], s[1]); });
     if (r.notes && r.notes.length) html += '<h3>Notes &amp; tips</h3><ul class="plain">' + r.notes.map(function(n){return '<li>'+n+'</li>';}).join('') + '</ul>';
     html += notesBox(r.id);
-    if (custom) html += '<div class="row"><button class="btn danger" data-del="'+r.id+'">Delete this recipe</button></div>';
+    if (custom) html += '<div class="row"><button class="btn danger" data-del="'+r.id+'" data-kind="'+kind+'">Delete this '+(kind==='cbase'?'base':'recipe')+'</button></div>';
     html += '</div><div class="editwrap"></div>';
     return html + '</div></div>';
   }
-  function customToRecipe(c, idx){
-    var items = [];
+  function customToRecipe(c, idx, isBase){
+    var items = linesOf(c.ing).map(function(t){ return renderLine(t); });
     [["Base",c.base],["Color",c.color],["Activator",c.act],["Add-ins",c.add],["Scent",c.scent]].forEach(function(p){
       if (p[1] && String(p[1]).trim()) items.push("<span class='k'>"+p[0]+":</span> "+esc(p[1]));
     });
     var secs = items.length ? [["Ingredients", items]] : [];
     var steps = linesOf(c.steps);
     if (steps.length) secs.push(["Steps", steps.map(function(t){ return renderLine(t); })]);
-    return { id:c.id, num:"Recipe #"+(CUSTOM_START+idx), name:c.name, sub:(typeof c.sub === 'string' && c.sub.trim()) ? c.sub : "My recipe", sw:"custom",
+    return { id:c.id, num: isBase ? "Base" : "Recipe #"+(CUSTOM_START+idx), name:c.name, sub:(typeof c.sub === 'string' && c.sub.trim()) ? c.sub : (isBase ? "My base" : "My recipe"), sw:"custom", base:!!isBase,
       sections: secs,
       notes: c.notes && String(c.notes).trim() ? [esc(c.notes).replace(/\n/g,'<br>')] : [] };
   }
   function renderRecipes(openId){
-    var customs = get('custom', []);
-    if (!Array.isArray(customs)) customs = [];
-    var html = '<h2 class="sect" id="base-squish">Base Squish</h2><p class="sectintro">Start here. Every recipe builds on one of these bases.</p>' +
-               BASES.map(function(b){ return card(applyEdit(b),false); }).join('') +
-               '<h2 class="sect">Recipes</h2>' +
-               RECIPES.map(function(r){ return card(applyEdit(r),false); }).join('') +
-               customs.map(function(c,i){ return card(customToRecipe(c,i), true); }).join('');
-    document.getElementById('recipe-list').innerHTML = html;
-    document.getElementById('bam-slot').innerHTML = '<h2 class="sect basicshead">Basics</h2><p class="sectintro">Your activator for the bases and glue recipes.</p>' + card(applyEdit(BAM), false);
+    var customs = getList('custom'), cbs = getList('cbase');
+    document.getElementById('base-list').innerHTML = '<h2 class="sect" id="base-squish">Base Squish</h2><p class="sectintro">Start here. Every recipe builds on one of these bases.</p>' +
+               BASES.map(function(b){ return card(applyEdit(b),'recipe'); }).join('') +
+               cbs.map(function(c,i){ return card(customToRecipe(c,i,true),'cbase'); }).join('');
+    document.getElementById('recipe-list').innerHTML = '<h2 class="sect">Recipes</h2>' +
+               RECIPES.map(function(r){ return card(applyEdit(r),'recipe'); }).join('') +
+               customs.map(function(c,i){ return card(customToRecipe(c,i), 'custom'); }).join('');
+    document.getElementById('bam-slot').innerHTML = '<h2 class="sect basicshead">Basics</h2><p class="sectintro">Your activator for the bases and glue recipes.</p>' + card(applyEdit(BAM), 'recipe');
     if (openId) { var el = document.querySelector('.card[data-id="'+openId+'"]'); if (el) toggle(el, true); }
   }
 
@@ -754,14 +927,15 @@ input[type=text]{min-height:56px}
         fld(p+'ing','ingredients','Ingredients',secItems(r,'Ingredients').map(htmlToText).join('\n'),{area:true,rows:7,hint:ONE+' Start a line with a word and a colon (like “Glue:”) to make it bold.'}) +
         fld(p+'steps','steps','Steps',secItems(r,'Steps').map(htmlToText).join('\n'),{area:true,rows:7,hint:ONE}) +
         fld(p+'notes','notes','Notes &amp; tips',(r.notes||[]).map(htmlToText).join('\n'),{area:true,rows:5,hint:ONE});
-    } else if (kind === 'custom') {
-      var list = get('custom', []); var i = customIndex(list, id); if (i < 0) return '';
-      var c = list[i]; title = 'Edit my recipe';
-      h += fld(p+'name','name','Name',c.name,{req:true}) + fld(p+'sub','sub','Short description',c.sub||'') +
-        fld(p+'base','base','Base',c.base,{area:true}) + fld(p+'color','color','Color',c.color,{area:true}) +
-        fld(p+'act','act','Activator',c.act,{area:true}) + fld(p+'add','add','Add-ins',c.add,{area:true}) +
-        fld(p+'scent','scent','Scent',c.scent,{area:true}) + fld(p+'steps','steps','Steps',c.steps||'',{area:true,rows:6,hint:ONE}) +
-        fld(p+'notes','notes','Notes',c.notes,{area:true});
+    } else if (kind === 'custom' || kind === 'cbase') {
+      var list = getList(kind); var i = customIndex(list, id); if (i < 0) return '';
+      var c = list[i], hasIng = typeof c.ing === 'string'; title = kind === 'cbase' ? 'Edit my base' : 'Edit my recipe';
+      var show = function(k){ return !hasIng || (c[k] && String(c[k]).trim()); };
+      h += fld(p+'name','name','Name',c.name,{req:true}) + fld(p+'sub','sub','Short description',c.sub||'');
+      if (hasIng) h += fld(p+'ing','ing','Ingredients',c.ing,{area:true,rows:7,hint:ONE+' Start a line with a word and a colon (like “Glue:”) to make it bold.'});
+      [['base','Base'],['color','Color'],['act','Activator'],['add','Add-ins'],['scent','Scent']].forEach(function(q){ if (show(q[0])) h += fld(p+q[0],q[0],q[1],c[q[0]],{area:true}); });
+      h += fld(p+'steps','steps','Steps',c.steps||'',{area:true,rows:6,hint:ONE}) + fld(p+'notes','notes','Notes',c.notes,{area:true});
+      if (kind === 'cbase') h += calcFields(p, c.calc);
     } else if (kind === 'color') {
       var col = findColor(COLORS, id, 'color:'); if (!col) return '';
       var ec = effColor(col); edited = ec.edited; title = 'Edit color';
@@ -817,14 +991,17 @@ input[type=text]{min-height:56px}
       setEdit(id, same ? null : nv);
       remapChecks(id, before, applyEdit(b));
       renderRecipes(id); afterSave(id, 'Saved ✓');
-    } else if (kind === 'custom') {
-      var list = get('custom', []); var i = customIndex(list, id); if (i < 0) return;
-      var bc = customToRecipe(list[i], i), c = list[i];
+    } else if (kind === 'custom' || kind === 'cbase') {
+      var list = getList(kind); var i = customIndex(list, id); if (i < 0) return;
+      var isB = kind === 'cbase', bc = customToRecipe(list[i], i, isB), c = list[i];
       c.name = val('name').trim() || c.name; c.sub = val('sub').trim();
-      c.base = val('base'); c.color = val('color'); c.act = val('act'); c.add = val('add'); c.scent = val('scent'); c.steps = val('steps'); c.notes = val('notes');
-      set('custom', list);
-      remapChecks(id, bc, customToRecipe(c, i));
+      ['ing','base','color','act','add','scent'].forEach(function(k){ if (f.elements[k]) c[k] = val(k); });
+      c.steps = val('steps'); c.notes = val('notes');
+      if (isB) c.calc = readCalc(f);
+      set(listKey(kind), list);
+      remapChecks(id, bc, customToRecipe(c, i, isB));
       renderRecipes(id); afterSave(id, 'Saved ✓');
+      if (isB) { refreshBasePickers(); renderEvents(); }
     } else if (kind === 'color') {
       var col = findColor(COLORS, id, 'color:'); if (!col) return;
       var cv = { name: val('name').trim() || col[0], sources: linesOf(val('sources')) };
@@ -881,12 +1058,16 @@ input[type=text]{min-height:56px}
     if (tab) { showPage(tab.dataset.page); return; }
     var rs = e.target.closest('[data-reset]');
     if (rs) { set('checks:'+rs.dataset.reset, {}); document.querySelectorAll('input[data-r="'+rs.dataset.reset+'"]').forEach(function(i){i.checked=false;}); return; }
+    var cp = e.target.closest('[data-copy]');
+    if (cp) { copyCard(cp.getAttribute('data-copy'), cp.getAttribute('data-kind')); return; }
     var del = e.target.closest('[data-del]');
-    if (del && confirm('Delete this recipe? This cannot be undone.')) {
+    var dk = del && del.dataset.kind === 'cbase' ? 'cbase' : 'custom';
+    if (del && confirm('Delete this '+(dk === 'cbase' ? 'base' : 'recipe')+'? This cannot be undone.')) {
       var id = del.dataset.del;
-      set('custom', get('custom',[]).filter(function(c){return c.id!==id;}));
+      set(listKey(dk), getList(dk).filter(function(c){return c.id!==id;}));
       try { localStorage.removeItem(NS+'notes:'+id); localStorage.removeItem(NS+'checks:'+id); localStorage.removeItem(NS+PHOTO_KEY+id); } catch(err){}
       renderRecipes();
+      if (dk === 'cbase') { refreshBasePickers(); renderEvents(); }
     }
   });
   document.addEventListener('change', function(e){
@@ -916,6 +1097,21 @@ input[type=text]{min-height:56px}
     renderRecipes(id);
     var st = document.getElementById('add-status'); st.textContent = 'Saved ✓';
     var el = document.querySelector('.card[data-id="'+id+'"]'); if (el) el.scrollIntoView({behavior:'smooth', block:'start'});
+  });
+
+  document.getElementById('add-base-body').innerHTML = addBaseFormHtml();
+  document.getElementById('add-base-form').addEventListener('submit', function(e){
+    e.preventDefault();
+    var f = this, v = function(n){ return f.elements[n] ? f.elements[n].value : ''; };
+    if (!v('name').trim()) return;
+    var id = 'b' + Date.now(), list = getList('cbase');
+    list.push({ id:id, name:v('name').trim(), sub:v('sub').trim(), base:v('base'), color:v('color'), act:v('act'), add:v('add'), scent:v('scent'), steps:v('steps'), notes:v('notes'), calc:readCalc(f) });
+    set(CB_KEY, list);
+    f.reset();
+    toggle(document.getElementById('add-base-card'), false);
+    renderRecipes(id); refreshBasePickers(); renderEvents();
+    document.getElementById('add-base-status').textContent = '';
+    var el = document.querySelector('.card[data-id="'+id+'"]'); if (el) { el.scrollIntoView({behavior:'smooth', block:'start'}); afterSave(id, 'Saved ✓ Your base is ready to use in Events.'); }
   });
 
   // ---------- Photo add / change / remove ----------
@@ -1187,23 +1383,354 @@ input[type=text]{min-height:56px}
                        function(){ st.textContent = 'Could not copy. Press and hold the list to copy it.'; });
     setTimeout(function(){ st.textContent=''; }, 3000);
   });
-  document.getElementById('reset-supplies').addEventListener('click', function(){
-    if (confirm('Reset to the starter list? This removes the items you added and marks everything In stock.')) {
-      supplies = starterSupplies(); saveSupplies(); renderSupplies();
+  renderSupplies();
+
+  // ---------- Promo media (Batch 3b) ----------
+  // IndexedDB "silversquish-media", store "media" (not localStorage: videos are far too big for it).
+  // Record: {id, ev (event id), kind 'image'|'video', type, name, size, blob, thumb (Blob|null), caption, created}
+  var MDB_NAME = 'silversquish-media', MDB_STORE = 'media';
+  var mediaList = [], mediaReady = false, mediaOk = !!window.indexedDB, mdbP = null, mURL = {};
+  var VIDEO_WARN = 50*1024*1024;
+  function mdb(){
+    if (!mdbP) mdbP = new Promise(function(res, rej){
+      if (!window.indexedDB) { rej(new Error('noidb')); return; }
+      var r; try { r = indexedDB.open(MDB_NAME, 1); } catch(e){ rej(e); return; }
+      r.onupgradeneeded = function(){ var db = r.result; if (!db.objectStoreNames.contains(MDB_STORE)) db.createObjectStore(MDB_STORE, {keyPath:'id'}); };
+      r.onsuccess = function(){ res(r.result); };
+      r.onerror = function(){ rej(r.error || new Error('idb')); };
+    });
+    return mdbP;
+  }
+  // Runs fn(store) in one transaction; resolves when the transaction commits (so a failed transaction changes nothing).
+  function mTx(mode, fn){
+    return mdb().then(function(db){ return new Promise(function(res, rej){
+      var tx, out;
+      try { tx = db.transaction(MDB_STORE, mode); out = fn(tx.objectStore(MDB_STORE)); } catch(e){ try { tx && tx.abort(); } catch(x){} rej(e); return; }
+      tx.oncomplete = function(){ res(out && out.readyState ? out.result : out); };
+      tx.onerror = function(ev){ rej(tx.error || (ev.target && ev.target.error) || new Error('idb')); };
+      tx.onabort = function(){ rej(tx.error || new Error('abort')); };
+    }); });
+  }
+  function mAll(){ return mTx('readonly', function(st){ return st.getAll(); }); }
+  function mPut(rec){ return mTx('readwrite', function(st){ st.put(rec); }); }
+  function mDelete(ids){ return mTx('readwrite', function(st){ ids.forEach(function(id){ st.delete(id); }); }); }
+  function mReplaceAll(recs){ return mTx('readwrite', function(st){ st.clear(); recs.forEach(function(r){ st.put(r); }); }); }
+  function validRec(m){ return m && typeof m.id === 'string' && (m.kind === 'image' || m.kind === 'video') && m.blob instanceof Blob; }
+  function loadMedia(){
+    return mAll().then(function(list){
+      mediaList = (list || []).filter(validRec).sort(function(a,b){ return (a.created||0) - (b.created||0); });
+    }, function(){ mediaOk = false; mediaList = []; }).then(function(){ mediaReady = true; });
+  }
+  function urlOf(rec, thumb){
+    var k = rec.id + (thumb ? ':t' : ''), b = thumb ? rec.thumb : rec.blob;
+    if (!mURL[k] && b) { try { mURL[k] = URL.createObjectURL(b); } catch(e){ mURL[k] = ''; } }
+    return mURL[k] || '';
+  }
+  function dropURLs(id){ [id, id+':t'].forEach(function(k){ if (mURL[k]) { try { URL.revokeObjectURL(mURL[k]); } catch(e){} delete mURL[k]; } }); }
+  function dropAllURLs(){ Object.keys(mURL).forEach(function(k){ try { URL.revokeObjectURL(mURL[k]); } catch(e){} }); mURL = {}; }
+  function isVideoFile(f){ return /^video\//.test(f.type || '') || /\.(mov|mp4|m4v|webm|3gp)$/i.test(f.name || ''); }
+  function isImageFile(f){ return /^image\//.test(f.type || '') || /\.(jpe?g|png|heic|heif|gif|webp)$/i.test(f.name || ''); }
+  function imageToBlob(file, maxSide, quality){
+    return new Promise(function(resolve, reject){
+      var url = URL.createObjectURL(file), img = new Image();
+      img.onload = function(){
+        try {
+          var w = img.naturalWidth, h = img.naturalHeight; if (!w || !h) throw new Error('decode');
+          var sc = Math.min(1, maxSide / Math.max(w, h)), cw = Math.max(1, Math.round(w*sc)), ch = Math.max(1, Math.round(h*sc));
+          var cv = document.createElement('canvas'); cv.width = cw; cv.height = ch;
+          var cx = cv.getContext('2d'); cx.fillStyle = '#ffffff'; cx.fillRect(0, 0, cw, ch); cx.drawImage(img, 0, 0, cw, ch);
+          URL.revokeObjectURL(url);
+          if (cv.toBlob) cv.toBlob(function(b){ b ? resolve(b) : reject(new Error('encode')); }, 'image/jpeg', quality);
+          else { var d = cv.toDataURL('image/jpeg', quality); resolve(b64ToBlob(d.slice(d.indexOf(',')+1), 'image/jpeg')); }
+        } catch(err){ URL.revokeObjectURL(url); reject(err.message === 'decode' ? err : new Error('encode')); }
+      };
+      img.onerror = function(){ URL.revokeObjectURL(url); reject(new Error('decode')); };
+      img.src = url;
+    });
+  }
+  // Small JPEG still from a video, for the thumbnail grid. Resolves null if the phone won't draw a frame.
+  function videoThumb(blob){
+    return new Promise(function(res){
+      var url = URL.createObjectURL(blob), v = document.createElement('video'), done = false;
+      function fin(b){ if (done) return; done = true; try { v.removeAttribute('src'); v.load(); } catch(e){} URL.revokeObjectURL(url); res(b || null); }
+      v.muted = true; v.playsInline = true; v.setAttribute('playsinline', ''); v.setAttribute('muted', ''); v.preload = 'auto';
+      v.onloadeddata = function(){ try { v.currentTime = Math.min(0.5, (v.duration || 1) / 4); } catch(e){ fin(null); } };
+      v.onseeked = function(){
+        try {
+          var w = v.videoWidth, h = v.videoHeight; if (!w || !h) { fin(null); return; }
+          var sc = Math.min(1, 480 / Math.max(w, h)), cv = document.createElement('canvas');
+          cv.width = Math.round(w*sc); cv.height = Math.round(h*sc);
+          cv.getContext('2d').drawImage(v, 0, 0, cv.width, cv.height);
+          if (cv.toBlob) cv.toBlob(function(b){ fin(b); }, 'image/jpeg', 0.75); else fin(null);
+        } catch(e){ fin(null); }
+      };
+      v.onerror = function(){ fin(null); };
+      setTimeout(function(){ fin(null); }, 8000);
+      v.src = url;
+    });
+  }
+  function mediaOf(evId){ return mediaList.filter(function(m){ return m.ev === evId; }).sort(function(a,b){ return (a.created||0) - (b.created||0); }); }
+  function findMedia(id){ for (var i=0;i<mediaList.length;i++) if (mediaList[i].id === id) return mediaList[i]; return null; }
+  function thumbHtml(kind, src){
+    return (src ? '<img alt="" src="'+esc(src)+'" loading="lazy">' : '<span class="mph" aria-hidden="true">'+(kind === 'video' ? '🎬' : '📷')+'</span>') +
+      (kind === 'video' ? '<span class="mplay" aria-hidden="true">▶</span>' : '');
+  }
+  function mediaTile(m, n){
+    var what = m.kind === 'video' ? 'video' : 'photo', big = m.kind === 'video' && m.size > VIDEO_WARN;
+    var src = m.kind === 'video' ? (m.thumb ? urlOf(m, true) : '') : urlOf(m);
+    return '<li class="mtile"><button type="button" class="mthumb" data-mview="'+esc(m.id)+'" aria-label="'+(m.kind === 'video' ? 'Play video ' : 'View photo ')+n+(m.caption ? ': '+esc(m.caption) : '')+'">'+thumbHtml(m.kind, src)+'</button>'+
+      '<div class="msize'+(big ? ' big' : '')+'">'+(m.kind === 'video' ? '🎬 Video' : '📷 Photo')+' · '+fmtSize(m.size||0)+(big ? ' ⚠️ big' : '')+'</div>'+
+      '<div class="mcapview" data-mcapwrap="'+esc(m.id)+'">'+capViewHtml(m)+'</div>'+
+      '<button type="button" class="btn danger" data-mdel="'+esc(m.id)+'" aria-label="Delete this '+what+'">Delete</button></li>';
+  }
+  function capViewHtml(m){
+    return (m.caption ? '<p class="gcap">'+esc(m.caption)+'</p>' : '<p class="nocap">No caption yet</p>')+
+      '<button type="button" class="btn ghost" data-mcapedit="'+esc(m.id)+'">✏️ Edit caption</button>';
+  }
+  function capFormHtml(m, pre){
+    var fid = (pre||'mcap-')+safeId(m.id);
+    return '<form class="mcapform" data-mcapform="'+esc(m.id)+'"><label class="mcaplbl" for="'+fid+'">Caption</label>'+
+      '<input type="text" id="'+fid+'" name="caption" value="'+esc(m.caption||'')+'" placeholder="e.g. Mixing time!" maxlength="200">'+
+      '<div class="row"><button class="btn" type="submit">Save</button><button class="btn ghost" type="button" data-mcapcancel="'+esc(m.id)+'">Cancel</button></div></form>';
+  }
+  function capWrap(id){ var all = document.querySelectorAll('[data-mcapwrap]'); for (var i=0;i<all.length;i++) if (all[i].getAttribute('data-mcapwrap') === id) return all[i]; return null; }
+  // Saves a caption on the IndexedDB item, then refreshes the event grid and the Gallery.
+  function setCaption(rec, v){
+    var old = rec.caption || ''; rec.caption = String(v || '').trim();
+    return mPut(rec).then(function(){ refreshMedia(rec.ev); evMediaMsg(rec.ev, 'Caption saved ✓', 'ok'); return true; },
+      function(){ rec.caption = old; evMediaMsg(rec.ev, 'Sorry, the caption couldn’t be saved.', 'err'); return false; });
+  }
+  function mediaGridHtml(evId){
+    var l = mediaOf(evId);
+    if (!l.length) return '';
+    return l.map(function(m, i){ return mediaTile(m, i+1); }).join('');
+  }
+  function promoSection(ev){
+    var id = esc(ev.id), n = mediaOf(ev.id).length;
+    return '<div class="promo"><h3>📣 Promo</h3><p class="hint">Add photos and videos from this event. They stay on this phone, show up in the Gallery, and go into your backups.</p>'+
+      (mediaOk ? '<div class="row"><button type="button" class="btn alt" data-ev-addmedia="'+id+'">📷 Add photos or videos</button></div>'+
+        '<input type="file" accept="image/*,video/*" multiple class="photoinput" tabindex="-1" aria-hidden="true" data-ev-mediainput="'+id+'">'
+        : '<p class="warn">Photos and videos can’t be saved here. Open the Squish Book from your home-screen app.</p>')+
+      '<div class="photomsg" data-ev-mmsg="'+id+'" aria-live="polite"></div>'+
+      '<ul class="mgrid" data-ev-media="'+id+'" aria-label="Promo photos and videos">'+mediaGridHtml(ev.id)+'</ul>'+
+      (n ? '' : '')+'</div>';
+  }
+  function refreshMedia(evId){
+    var all = document.querySelectorAll('[data-ev-media]');
+    for (var i=0;i<all.length;i++) if (all[i].getAttribute('data-ev-media') === evId) all[i].innerHTML = mediaGridHtml(evId);
+    renderGallery();
+  }
+  var mmTimers = {};
+  function evMediaMsg(evId, t, cls){
+    var all = document.querySelectorAll('[data-ev-mmsg]');
+    for (var i=0;i<all.length;i++) if (all[i].getAttribute('data-ev-mmsg') === evId) {
+      var m = all[i]; m.className = 'photomsg ' + (cls||''); m.textContent = t;
+      clearTimeout(mmTimers[evId]); if (cls !== 'err' && t) mmTimers[evId] = setTimeout(function(){ m.textContent = ''; }, 6000);
+    }
+  }
+  function addMediaFiles(evId, files){
+    var list = [].slice.call(files || []); if (!list.length) return;
+    if (!mediaOk) { evMediaMsg(evId, 'Photos and videos can’t be saved here. Open the Squish Book from your home-screen app.', 'err'); return; }
+    var added = {image:0, video:0}, bytes = 0, skipped = 0, bad = 0, stop = null, seq = Promise.resolve();
+    evMediaMsg(evId, 'Adding ' + (list.length === 1 ? '1 item' : list.length + ' items') + '…', 'ok');
+    list.forEach(function(f, i){
+      seq = seq.then(function(){
+        if (stop) return;
+        var vid = isVideoFile(f), img = !vid && isImageFile(f);
+        if (!vid && !img) { bad++; return; }
+        if (vid && f.size > VIDEO_WARN && !confirm('This video is ' + fmtSize(f.size) + '. Videos over 50 MB fill up your phone fast and make backups very big. Save it anyway?')) { skipped++; return; }
+        var rec = { id:'m' + Date.now() + '-' + i + '-' + Math.random().toString(36).slice(2, 7), ev:evId, caption:'', created:Date.now(), name:f.name || '' };
+        var p = img
+          ? imageToBlob(f, 1600, 0.82).then(function(b){ rec.kind = 'image'; rec.type = 'image/jpeg'; rec.blob = b; rec.thumb = null; })
+          : videoThumb(f).then(function(t){ rec.kind = 'video'; rec.type = f.type || 'video/mp4'; rec.blob = f.slice(0, f.size, rec.type); rec.thumb = t; });
+        return p.then(function(){ rec.size = rec.blob.size; return mPut(rec); }).then(function(){
+          mediaList.push(rec); added[rec.kind]++; bytes += rec.size;
+        }, function(err){ if (err && err.message === 'decode') bad++; else stop = err || new Error('save'); });
+      });
+    });
+    seq.then(function(){
+      refreshMedia(evId);
+      var parts = [], n = added.image + added.video;
+      if (n) parts.push('Added ' + [added.image ? plural(added.image, 'photo') : '', added.video ? plural(added.video, 'video') : ''].filter(Boolean).join(' and ') + ' ✓ (' + fmtSize(bytes) + ' on this phone).');
+      if (skipped) parts.push(plural(skipped, 'big video') + ' skipped.');
+      if (bad) parts.push(plural(bad, 'file') + ' couldn’t be opened. Try a JPEG photo or an MP4/MOV video.');
+      if (stop) parts.push(isQuota(stop) || /quota/i.test(String(stop && (stop.name + stop.message))) ? 'Your phone ran out of room, so some items weren’t saved. Delete a big video, then try again.' : 'Sorry, some items couldn’t be saved. Please try again.');
+      evMediaMsg(evId, parts.join(' ') || 'Nothing added.', (stop || bad) ? 'err' : 'ok');
+      renderBackupStatus();
+    });
+  }
+  // Full-screen viewer for photos and videos. o.rec (an event promo item) adds "Edit caption".
+  function openViewer(o){
+    document.querySelectorAll('video').forEach(function(v){ try { v.pause(); } catch(x){} });
+    var z = document.createElement('div'); z.className = 'zoom'; z.setAttribute('role', 'dialog'); z.setAttribute('aria-modal', 'true'); z.setAttribute('aria-label', o.label || (o.kind === 'video' ? 'Video' : 'Photo'));
+    function capText(){ return o.rec ? (o.rec.caption ? o.rec.caption + (o.context ? ' · ' + o.context : '') : (o.context || '')) : (o.caption || ''); }
+    z.innerHTML = (o.kind === 'video' ? '<video src="'+esc(o.src)+'" controls playsinline autoplay'+(o.poster ? ' poster="'+esc(o.poster)+'"' : '')+'></video>' : '<img src="'+esc(o.src)+'" alt="'+esc(o.alt || o.label || 'Photo')+'">') +
+      '<p class="zcap"></p><div class="zedit" hidden></div><div class="zbar">' + (o.rec ? '<button class="btn ghost" type="button" data-zedit>✏️ Edit caption</button>' : '') + '<button class="btn zclose" type="button">Close</button></div>';
+    var cap = z.querySelector('.zcap'), ed = z.querySelector('.zedit');
+    function showCap(){ var t = capText(); cap.textContent = t; cap.hidden = !t; }
+    showCap();
+    function close(){ var v = z.querySelector('video'); if (v) { try { v.pause(); } catch(x){} } z.remove(); document.removeEventListener('keydown', onKey); if (o.back && o.back.focus && document.body.contains(o.back)) o.back.focus(); }
+    function onKey(ev){ if (ev.key === 'Escape') close(); }
+    z.addEventListener('click', function(ev){
+      if (ev.target.closest('.zclose') || ev.target === z) { close(); return; }
+      if (ev.target.closest('[data-zedit]')) { ed.innerHTML = capFormHtml(o.rec, 'zcap-'); ed.hidden = false; ev.target.closest('[data-zedit]').hidden = true; var i = ed.querySelector('input'); if (i) i.focus(); return; }
+      if (ev.target.closest('[data-mcapcancel]')) { ev.stopPropagation(); ed.innerHTML = ''; ed.hidden = true; z.querySelector('[data-zedit]').hidden = false; return; }
+      if (o.kind !== 'video' && ev.target.tagName === 'IMG' && ed.hidden) close();
+    });
+    z.addEventListener('submit', function(ev){
+      ev.preventDefault(); ev.stopPropagation();
+      var f = ev.target; setCaption(o.rec, f.elements.caption.value).then(function(okd){ if (!okd) return; ed.innerHTML = ''; ed.hidden = true; z.querySelector('[data-zedit]').hidden = false; showCap(); });
+    });
+    document.addEventListener('keydown', onKey);
+    document.body.appendChild(z); z.querySelector('.zclose').focus();
+  }
+  // ---------- Gallery: built-in promo + every event's promo media, newest first ----------
+  var BUILTIN_GALLERY = [
+    { id:'g-reel', kind:'video', src:'media/promo-reel.mp4', thumb:'media/promo-reel-poster.jpg', what:'Promo reel', date:'2026-10-10', created:2 },
+    { id:'g-poster', kind:'image', src:'media/promo-poster.jpg', thumb:'media/promo-poster.jpg', what:'Party poster', date:'2026-10-10', created:1 }
+  ];
+  // Each item: primary label = its caption if set, else the event name (built-ins: the Featured title).
+  function galleryItems(){
+    var fv = featuredVals();
+    var items = mediaList.map(function(m){
+      var ev = findEv(m.ev), d = new Date(m.created || 0), nm = ev ? (ev.name || 'Event') : 'Deleted event';
+      var date = (ev && ev.date) ? ev.date : ymd(d), when = nm + ' · ' + fmtDate(date);
+      return { id:m.id, kind:m.kind, rec:m, date:date, created:m.created || 0, primary: m.caption || nm, secondary: m.caption ? when : fmtDate(date), context: when };
+    }).concat(BUILTIN_GALLERY.map(function(b){
+      return { id:b.id, kind:b.kind, src:b.src, thumb:b.thumb, date:b.date, created:b.created, primary: fv.title, secondary: fv.sub + ' · ' + b.what };
+    }));
+    return items.sort(function(a,b){ return a.date < b.date ? 1 : a.date > b.date ? -1 : (b.created - a.created); });
+  }
+  function renderGallery(){
+    var grid = document.getElementById('gallery-grid'); if (!grid) return;
+    var it = galleryItems(), nv = it.filter(function(x){ return x.kind === 'video'; }).length;
+    document.getElementById('gallery-count').textContent = plural(it.length - nv, 'photo') + ' · ' + plural(nv, 'video');
+    grid.innerHTML = it.map(function(x){
+      var src = x.rec ? (x.kind === 'video' ? (x.rec.thumb ? urlOf(x.rec, true) : '') : urlOf(x.rec)) : x.thumb;
+      return '<li class="gtile"><button type="button" class="mthumb" data-gview="'+esc(x.id)+'" aria-label="'+(x.kind === 'video' ? 'Play video' : 'View photo')+': '+esc(x.primary)+'">'+thumbHtml(x.kind, src)+'</button>'+
+        '<div class="glabel"><span class="k">'+esc(x.primary)+'</span><span class="gsub">'+esc(x.secondary)+'</span></div></li>';
+    }).join('');
+  }
+  // ---------- Featured (editable title / date line / caption) ----------
+  // localStorage "silversquish:featured" = {title, sub, cap}; missing/blank fields use the built-in text.
+  var FEAT_KEY = 'featured', FEAT_DEF = { title:'Our last squish party', sub:'Saturday, Oct 10, 2026', cap:'Book a squish party · facebook.com/silversquish' };
+  var FB_URL = 'https://facebook.com/silversquish';
+  function featuredVals(){
+    var o = get(FEAT_KEY, null), v = {};
+    ['title','sub','cap'].forEach(function(k){ v[k] = (o && typeof o === 'object' && typeof o[k] === 'string' && o[k].trim()) ? o[k].trim() : FEAT_DEF[k]; });
+    return v;
+  }
+  function featuredEdited(){ var o = get(FEAT_KEY, null); return !!(o && typeof o === 'object'); }
+  // The Facebook link always stays: linked in place if the caption mentions it, otherwise added after.
+  function featCapHtml(t){
+    var m = /facebook\.com\/silversquish/i.exec(t), a = '<a href="'+FB_URL+'" target="_blank" rel="noopener">';
+    if (m) return esc(t.slice(0, m.index)) + a + esc(m[0]) + '</a>' + esc(t.slice(m.index + m[0].length));
+    return esc(t) + '<br>' + a + 'facebook.com/silversquish</a>';
+  }
+  function renderFeatured(){
+    var v = featuredVals();
+    document.getElementById('featured-title').textContent = v.title;
+    document.getElementById('featured-when').textContent = v.sub;
+    document.getElementById('featured-cap').innerHTML = featCapHtml(v.cap);
+    document.getElementById('featured-video').setAttribute('aria-label', 'Promo video: ' + v.title);
+    document.getElementById('featured-edited').innerHTML = featuredEdited() ? '<p class="editedtag">✏️ You edited this. <button type="button" class="linkbtn" id="featured-reset">Reset to original</button></p>' : '';
+  }
+  function featMsg(t){ var m = document.getElementById('featured-msg'); m.textContent = t; setTimeout(function(){ if (m.textContent === t) m.textContent = ''; }, 3000); }
+  function closeFeatForm(){ document.getElementById('featured-form').innerHTML = ''; document.getElementById('featured-editrow').hidden = false; }
+  document.getElementById('featured').addEventListener('click', function(e){
+    if (e.target.closest('#featured-edit')) {
+      var v = featuredVals(), p = 'feat-';
+      document.getElementById('featured-form').innerHTML = '<form class="editform formgrid" id="featured-editform"><h3>Edit Featured</h3>' +
+        fld(p+'title','title','Title',v.title,{req:true}) + fld(p+'sub','sub','Date line',v.sub,{hint:'e.g. Saturday, Oct 10, 2026'}) +
+        fld(p+'cap','cap','Poster caption',v.cap,{area:true,rows:3,hint:'The facebook.com/silversquish link stays either way.'}) +
+        '<div class="row"><button class="btn" type="submit">Save changes</button><button class="btn ghost" type="button" id="featured-cancel">Cancel</button></div>' +
+        (featuredEdited() ? '<div class="row"><button class="btn danger" type="button" id="featured-reset2">Reset to original</button></div>' : '') + '</form>';
+      document.getElementById('featured-editrow').hidden = true;
+      document.getElementById(p+'title').focus();
+      return;
+    }
+    if (e.target.closest('#featured-cancel')) { closeFeatForm(); document.getElementById('featured-edit').focus(); return; }
+    if (e.target.closest('#featured-reset') || e.target.closest('#featured-reset2')) {
+      if (!confirm('Reset the Featured title, date and caption to the original?')) return;
+      try { localStorage.removeItem(NS+FEAT_KEY); } catch(err){}
+      closeFeatForm(); renderFeatured(); renderGallery(); featMsg('Back to the original ✓');
     }
   });
-  renderSupplies();
+  document.getElementById('featured').addEventListener('submit', function(e){
+    var f = e.target.closest('#featured-editform'); if (!f) return;
+    e.preventDefault();
+    var nv = { title:f.elements.title.value.trim(), sub:f.elements.sub.value.trim(), cap:f.elements.cap.value.trim() };
+    var same = ['title','sub','cap'].every(function(k){ return !nv[k] || nv[k] === FEAT_DEF[k]; });
+    if (same) { try { localStorage.removeItem(NS+FEAT_KEY); } catch(err){} } else set(FEAT_KEY, nv);
+    closeFeatForm(); renderFeatured(); renderGallery(); featMsg('Saved ✓');
+    document.getElementById('featured-edit').focus();
+  });
+  renderFeatured();
+  document.addEventListener('click', function(e){
+    var am = e.target.closest('[data-ev-addmedia]');
+    if (am) { var inp = document.querySelector('[data-ev-mediainput="'+am.getAttribute('data-ev-addmedia')+'"]'); if (inp) { inp.value = ''; inp.click(); } return; }
+    var mv = e.target.closest('[data-mview]');
+    if (mv) { var m = findMedia(mv.getAttribute('data-mview')); if (m) openViewer({kind:m.kind, src:urlOf(m), rec:m, back:mv}); return; }
+    var ce = e.target.closest('[data-mcapedit]');
+    if (ce) { var r1 = findMedia(ce.getAttribute('data-mcapedit')), w1 = r1 && capWrap(r1.id); if (w1) { w1.innerHTML = capFormHtml(r1); var i1 = w1.querySelector('input'); i1.focus(); } return; }
+    var cc = e.target.closest('.mtile [data-mcapcancel]');
+    if (cc) { var r2 = findMedia(cc.getAttribute('data-mcapcancel')), w2 = r2 && capWrap(r2.id); if (w2) { w2.innerHTML = capViewHtml(r2); w2.querySelector('[data-mcapedit]').focus(); } return; }
+    var gv = e.target.closest('[data-gview]');
+    if (gv) {
+      var gid = gv.getAttribute('data-gview'), g = null;
+      galleryItems().forEach(function(x){ if (x.id === gid) g = x; });
+      if (g) openViewer({kind:g.kind, src: g.rec ? urlOf(g.rec) : g.src, poster: g.rec ? '' : (g.kind === 'video' ? g.thumb : ''), rec:g.rec || null, context:g.context, caption: g.rec ? '' : g.primary + ' · ' + g.secondary, back:gv});
+      return;
+    }
+    var md = e.target.closest('[data-mdel]');
+    if (md) {
+      var rec = findMedia(md.getAttribute('data-mdel')); if (!rec) return;
+      if (!confirm('Delete this ' + (rec.kind === 'video' ? 'video' : 'photo') + '? This cannot be undone.')) return;
+      mDelete([rec.id]).then(function(){
+        mediaList = mediaList.filter(function(x){ return x.id !== rec.id; }); dropURLs(rec.id);
+        refreshMedia(rec.ev); evMediaMsg(rec.ev, 'Deleted ✓', 'ok');
+      }, function(){ evMediaMsg(rec.ev, 'Sorry, that couldn’t be deleted. Please try again.', 'err'); });
+    }
+  });
+  document.addEventListener('change', function(e){
+    var t = e.target;
+    if (t.matches('input[type=file][data-ev-mediainput]')) addMediaFiles(t.getAttribute('data-ev-mediainput'), t.files);
+  });
+  document.addEventListener('submit', function(e){
+    var f = e.target.closest('.mtile form[data-mcapform]'); if (!f) return;
+    e.preventDefault();
+    var rec = findMedia(f.getAttribute('data-mcapform')); if (!rec) return;
+    setCaption(rec, f.elements.caption.value).then(function(okd){ var w = capWrap(rec.id); if (okd && w) { var b = w.querySelector('[data-mcapedit]'); if (b) b.focus(); } });
+  });
 
   // ---------- Events ----------
   // localStorage "silversquish:events" = [{id, name, date "YYYY-MM-DD", start "HH:MM", end, location, size, per, base, notes, created}]
   var EV_KEY = 'events';
+  // Built-in bases for the calculator: amounts per batch.
   var BASE_TYPES = [
-    {k:'clear',  label:'Clear base'},
-    {k:'white',  label:'White base'},
-    {k:'butter', label:'Butter base (glue + clay)'},
-    {k:'fluffy', label:'Fluffy base (glue + shaving cream)'}
+    {k:'clear',  label:'Clear base',  short:'Clear base',  glue:'clear', glueCups:0.5, bamTbsp:2, clayOz:0, shaveCups:0},
+    {k:'white',  label:'White base',  short:'White base',  glue:'white', glueCups:0.5, bamTbsp:2, clayOz:0, shaveCups:0},
+    {k:'butter', label:'Butter base (glue + clay)', short:'Butter base', glue:'white', glueCups:0.5, bamTbsp:2, clayOz:1, shaveCups:0},
+    {k:'fluffy', label:'Fluffy base (glue + shaving cream)', short:'Fluffy base', glue:'white', glueCups:0.5, bamTbsp:2, clayOz:0, shaveCups:1.5}
   ];
-  function baseLabel(k){ for (var i=0;i<BASE_TYPES.length;i++) if (BASE_TYPES[i].k===k) return BASE_TYPES[i].label; return BASE_TYPES[1].label; }
+  function numOr(v, d){ if (v === null || v === undefined || v === '') return d; var n = parseFloat(v); return (isFinite(n) && n >= 0) ? n : d; }
+  // My bases (silversquish:customBases) join the list; blank amounts fall back to the White Base amounts.
+  function customBaseSpecs(){
+    return getList('cbase').filter(function(c){ return c && c.id; }).map(function(c){
+      var a = (c.calc && typeof c.calc === 'object') ? c.calc : {}, nm = (c.name && String(c.name).trim()) || 'My base';
+      return {k:c.id, label:nm+' (my base)', short:nm, custom:true, glue:a.glue === 'clear' ? 'clear' : 'white',
+        glueCups:numOr(a.glueCups, 0.5), bamTbsp:numOr(a.bamTbsp, 2), clayOz:numOr(a.clayOz, 0), shaveCups:numOr(a.shaveCups, 0)};
+    });
+  }
+  function allBaseSpecs(){ return BASE_TYPES.concat(customBaseSpecs()); }
+  function baseSpec(k){ var a = allBaseSpecs(); for (var i=0;i<a.length;i++) if (a[i].k === k) return a[i]; return null; }
+  function baseLabel(k){ var s = baseSpec(k); return s ? s.label : 'Deleted base'; }
+  // Older events stored one "base"; newer ones store "bases" (array). "base" is still written (= bases[0]) for older copies.
+  function evBases(ev){
+    var b = Array.isArray(ev.bases) ? ev.bases.filter(function(x){ return typeof x === 'string' && x; }) : [];
+    if (!b.length) b = [typeof ev.base === 'string' && ev.base ? ev.base : 'white'];
+    return b;
+  }
   function loadEvents(){ var v = get(EV_KEY, []); return Array.isArray(v) ? v.filter(function(x){ return x && typeof x === 'object' && x.id; }) : []; }
   var events = loadEvents();
   function saveEvents(){ set(EV_KEY, events); }
@@ -1231,52 +1758,73 @@ input[type=text]{min-height:56px}
   }
   function plural(n, one, many){ return n + ' ' + (n === 1 ? one : (many || one+'s')); }
 
-  // Batches = ceil(group size × squish per person × 1.1), and always at least 1 spare.
-  // Per batch: Clear/White = 1/2 cup glue (4 fl oz) + 1/4 cup water + ~1.5 Tbsp BAM.
-  //            Butter = White batch + ~1 oz air-dry clay. Fluffy = 1/2 cup white glue + 1.5 cups shaving cream + ~1.5 Tbsp BAM.
-  // BAM = 1 tsp borax per 1 cup warm water. 1 cup = 16 Tbsp. 1 gallon = 128 fl oz. 1 can shaving cream (~7 oz) ≈ 4 cups foam.
+  // For EACH checked base: batches = ceil(group size × squish per person × 1.1), and always at least 1 spare.
+  // Amounts per batch come from the base (built-in: 1/2 cup glue + 2 Tbsp BAM, as on the White Base card; Butter +1 oz clay; Fluffy +1.5 cups shaving cream).
+  // BAM = 1 tsp borax per 1 cup warm water. 1 cup = 16 Tbsp = 8 fl oz. 1 gallon = 128 fl oz. 1 can shaving cream (~7 oz) ≈ 4 cups foam.
+  function batchesFor(people, per){
+    var sq = Math.ceil(Math.round(people * per * 1000) / 1000);
+    return { squishes:sq, batches: sq > 0 ? Math.max(Math.ceil(Math.round(people * per * 1.1 * 1000) / 1000), sq + 1) : 0 };
+  }
   function calcEvent(ev){
     var people = Math.max(0, Math.floor(+ev.size || 0));
     var per = (+ev.per > 0) ? +ev.per : 1;
-    var squishes = Math.ceil(Math.round(people * per * 1000) / 1000);
-    var batches = squishes > 0 ? Math.max(Math.ceil(Math.round(people * per * 1.1 * 1000) / 1000), squishes + 1) : 0;
-    var base = ev.base || 'white';
-    var c = { people:people, per:per, squishes:squishes, batches:batches, spares:batches - squishes, base:base };
-    c.glueOz = batches * 4; c.glueCups = batches / 2; c.bottles = batches;
-    c.waterCups = base === 'fluffy' ? 0 : batches * 0.25;
-    c.bamTbsp = batches * 1.5; c.bamCups = c.bamTbsp / 16;
-    c.makeCups = Math.ceil(c.bamCups * 2) / 2; c.boraxTsp = c.makeCups;
-    c.clayOz = base === 'butter' ? batches : 0;
-    c.foamCups = base === 'fluffy' ? batches * 1.5 : 0; c.cans = Math.ceil(c.foamCups / 4);
-    c.jars = squishes; c.gloves = people; c.bowls = people; c.spoons = people;
-    return c;
+    var t = { people:people, per:per, squishes:0, batches:0, glue:{clear:0, white:0}, bamTbsp:0, clayOz:0, shaveCups:0, rows:[], missing:0 };
+    evBases(ev).forEach(function(k){
+      var s = baseSpec(k); if (!s) { t.missing++; return; }
+      var b = batchesFor(people, per);
+      var r = { k:k, label:s.short, spec:s, squishes:b.squishes, batches:b.batches, spares:b.batches - b.squishes,
+        glueCups:b.batches*s.glueCups, bamTbsp:b.batches*s.bamTbsp, clayOz:b.batches*s.clayOz, shaveCups:b.batches*s.shaveCups };
+      t.rows.push(r); t.squishes += r.squishes; t.batches += r.batches; t.glue[s.glue] += r.glueCups;
+      t.bamTbsp += r.bamTbsp; t.clayOz += r.clayOz; t.shaveCups += r.shaveCups;
+    });
+    t.bamCups = t.bamTbsp / 16; t.makeCups = Math.ceil(t.bamCups * 2) / 2; t.boraxTsp = t.makeCups;
+    t.cans = Math.ceil(t.shaveCups / 4);
+    t.jars = t.squishes; t.gloves = people; t.bowls = people; t.spoons = people;
+    return t;
   }
+  function perBatchText(s){
+    var p = [frac(s.glueCups,4)+' cup '+s.glue+' glue', frac(s.bamTbsp,2)+' Tbsp BAM'];
+    if (s.clayOz) p.push(frac(s.clayOz,2)+' oz clay');
+    if (s.shaveCups) p.push(frac(s.shaveCups,2)+' cups shaving cream');
+    return p.join(' + ');
+  }
+  function glueMain(cups){ return frac(cups,4)+' cups ('+frac(cups*8,2)+' fl oz)'; }
+  function glueSmall(cups){ var oz = cups*8; return 'About '+plural(Math.ceil(oz/4 - 1e-9),'bottle')+' (4 oz)'+(oz >= 64 ? ', or about '+frac(oz/128,4)+' gallon (1 gallon = 128 fl oz)' : ''); }
   function needsHtml(ev){
     var c = calcEvent(ev);
-    if (!c.batches) return '<div class="needs"><h3>What you’ll need</h3><p>Add a group size to see what to bring.</p></div>';
-    var glueName = c.base === 'clear' ? 'Clear glue' : 'White glue';
-    var L = [];
-    function li(label, main, small){ L.push('<li><span class="big"><span class="k">'+label+':</span> '+main+'</span>'+(small?'<span class="sm">'+small+'</span>':'')+'</li>'); }
-    li('Batches', String(c.batches), plural(c.squishes, 'squish', 'squishes')+' for '+plural(c.people,'person','people')+(c.per!==1?' ('+frac(c.per,2)+' each)':'')+' + '+plural(c.spares,'spare')+' (about 10% extra)');
-    li(glueName, frac(c.glueCups,4)+' cups ('+c.glueOz+' fl oz)', 'About '+plural(c.bottles,'bottle')+' (4 oz)'+(c.glueOz >= 64 ? ', or about '+frac(c.glueOz/128,4)+' gallon (1 gallon = 128 fl oz)' : ''));
-    if (c.waterCups) li('Water', frac(c.waterCups,4)+' cups');
-    if (c.base === 'butter') li('White air-dry clay', 'about '+c.clayOz+' oz', 'A golf-ball-sized lump per batch');
-    if (c.base === 'fluffy') li('Shaving cream', 'about '+frac(c.foamCups,2)+' cups of foam', 'About '+plural(c.cans,'can')+' (a 7 oz can makes roughly 4 cups of foam)');
-    li('BAM', frac(c.bamTbsp,2)+' Tbsp (about '+frac(c.bamCups,4)+' '+(c.bamCups>1?'cups':'cup')+')', 'To make it: '+frac(c.boraxTsp,2)+' tsp borax + '+frac(c.makeCups,2)+' '+(c.makeCups>1?'cups':'cup')+' warm water'+(c.makeCups > 5 ? '. That is more than one 40 oz jar (5 cups).' : '. Your 40 oz jar holds 5 cups.'));
-    li('Jars or containers', String(c.jars), 'One per squish to take home');
-    li('Gloves', plural(c.gloves,'pair'), 'One pair per guest, plus a pair for you');
-    li('Mixing bowls', String(c.bowls), 'Plus '+plural(c.spoons,'spoon or spatula','spoons or spatulas'));
-    return '<div class="needs"><h3>What you’ll need</h3><p class="hint">Estimates only. Amounts are approximate, so round up when you shop.</p><ul>'+L.join('')+'</ul></div>';
+    if (!c.batches) return '<div class="needs"><h3>What you’ll need</h3><p>'+(c.people ? 'Pick at least one base to see what to bring.' : 'Add a group size to see what to bring.')+'</p></div>';
+    var P = [], L = [];
+    function li(arr, label, main, small){ arr.push('<li><span class="big"><span class="k">'+esc(label)+':</span> '+main+'</span>'+(small?'<span class="sm">'+small+'</span>':'')+'</li>'); }
+    c.rows.forEach(function(r){
+      var tot = [frac(r.glueCups,4)+' cups '+r.spec.glue+' glue', frac(r.bamTbsp,2)+' Tbsp BAM'];
+      if (r.clayOz) tot.push('about '+frac(r.clayOz,2)+' oz clay');
+      if (r.shaveCups) tot.push('about '+frac(r.shaveCups,2)+' cups shaving cream');
+      li(P, r.label, plural(r.batches,'batch','batches'), plural(r.squishes,'squish','squishes')+' + '+plural(r.spares,'spare')+'. Per batch: '+esc(perBatchText(r.spec))+'. Total: '+esc(tot.join(', '))+'.');
+    });
+    var each = c.rows.length > 1 ? frac(c.per,2)+' of each of '+c.rows.length+' bases' : (c.per !== 1 ? frac(c.per,2)+' each' : '');
+    li(L, 'Batches', String(c.batches), plural(c.squishes,'squish','squishes')+' for '+plural(c.people,'person','people')+(each ? ' ('+each+')' : '')+' + spares (about 10% extra)');
+    if (c.glue.clear) li(L, 'Clear glue', glueMain(c.glue.clear), glueSmall(c.glue.clear));
+    if (c.glue.white) li(L, 'White glue', glueMain(c.glue.white), glueSmall(c.glue.white));
+    li(L, 'BAM', frac(c.bamTbsp,2)+' Tbsp (about '+frac(c.bamCups,4)+' '+(c.bamCups>1?'cups':'cup')+')', 'Make '+frac(c.makeCups,2)+' '+(c.makeCups>1?'cups':'cup')+(c.makeCups > 5 ? '. That is more than one 40 oz jar (5 cups).' : '. Your 40 oz jar holds 5 cups.'));
+    li(L, 'Borax', frac(c.boraxTsp,2)+' tsp', 'For the BAM: 1 tsp borax per cup (see the BAM card)');
+    if (c.clayOz) li(L, 'White air-dry clay', 'about '+frac(c.clayOz,2)+' oz', 'A golf-ball-sized lump is about 1 oz');
+    if (c.shaveCups) li(L, 'Shaving cream', 'about '+frac(c.shaveCups,2)+' cups of foam', 'About '+plural(c.cans,'can')+' (a 7 oz can makes roughly 4 cups of foam)');
+    li(L, 'Jars or containers', String(c.jars), 'One per squish to take home');
+    li(L, 'Gloves', plural(c.gloves,'pair'), 'One pair per guest, plus a pair for you');
+    li(L, 'Mixing bowls', String(c.bowls), 'Plus '+plural(c.spoons,'spoon or spatula','spoons or spatulas'));
+    return '<div class="needs"><h3>What you’ll need</h3><p class="hint">Estimates only. Amounts are approximate, so round up when you shop.</p>'+
+      '<h3 class="needsub">Per base</h3><ul>'+P.join('')+'</ul><h3 class="needsub">Combined totals</h3><ul>'+L.join('')+'</ul>'+
+      (c.missing ? '<p class="hint">'+(c.missing === 1 ? 'One base' : c.missing+' bases')+' for this event was deleted from your Squish Book, so it isn’t counted.</p>' : '')+'</div>';
   }
   // Which supplies an event uses (matched by name in My Supplies).
   function eventNeeds(ev){
-    var b = ev.base || 'white', list = [];
-    if (b === 'clear') list.push({name:"Elmer's clear glue", cat:'Bases', re:/clear\s+glue/i, alt:/glue/i});
-    else list.push({name:"Elmer's white glue", cat:'Bases', re:/white\s+glue/i, alt:/glue/i});
+    var c = calcEvent(ev), list = [];
+    if (c.glue.clear) list.push({name:"Elmer's clear glue", cat:'Bases', re:/clear\s+glue/i, alt:/glue/i});
+    if (c.glue.white || !c.rows.length) list.push({name:"Elmer's white glue", cat:'Bases', re:/white\s+glue/i, alt:/glue/i});
     list.push({name:'BAM (40 oz jar)', cat:'Activators', re:/\bBAM\b|activator/i});
     list.push({name:'Borax', cat:'Activators', re:/borax/i, not:/\bBAM\b|activator/i});
-    if (b === 'butter') list.push({name:'White air-dry clay', cat:'Bases', re:/clay/i});
-    if (b === 'fluffy') list.push({name:'Shaving cream', cat:'Add-ins', re:/shaving/i});
+    if (c.clayOz) list.push({name:'White air-dry clay', cat:'Bases', re:/clay/i});
+    if (c.shaveCups) list.push({name:'Shaving cream', cat:'Add-ins', re:/shaving/i});
     return list;
   }
   function matchSup(need){
@@ -1297,9 +1845,22 @@ input[type=text]{min-height:56px}
     if (missing.length) msg.push('Not on your Supplies list yet: '+missing.map(esc).join(', ')+'.');
     return '<div class="warn" role="note">⚠️ '+msg.join(' ')+' Check your Supplies before this event.</div>';
   }
+  function basePickList(sel){
+    return allBaseSpecs().map(function(s){
+      return '<li><label><input type="checkbox" name="bases" value="'+esc(s.k)+'"'+(sel.indexOf(s.k) >= 0 ? ' checked' : '')+'><span>'+esc(s.label)+'</span></label></li>';
+    }).join('');
+  }
+  // Re-list bases in open event forms (after My bases change), keeping what's checked.
+  function refreshBasePickers(){
+    document.querySelectorAll('form[data-ev-form] fieldset.basepick ul').forEach(function(ul){
+      var sel = [].map.call(ul.querySelectorAll('input:checked'), function(i){ return i.value; });
+      ul.innerHTML = basePickList(sel);
+    });
+  }
   function eventFormHtml(ev){
     var e = ev || {}, p = 'ev-'+(ev ? safeId(ev.id) : 'new')+'-';
     function inp(n, label, type, val, extra){ return '<label for="'+p+n+'">'+label+'</label><input type="'+type+'" id="'+p+n+'" name="'+n+'" value="'+esc(val==null?'':val)+'"'+(extra||'')+'>'; }
+    var sel = ev ? evBases(ev) : ['white'];
     return '<form class="'+(ev?'editform ':'')+'formgrid" data-ev-form="'+(ev?esc(ev.id):'new')+'">'+(ev?'<h3>Edit event</h3>':'')+
       inp('name','Event name','text',e.name,' required placeholder="e.g. Library squish class"')+
       inp('date','Date','date',e.date,' required')+
@@ -1307,26 +1868,27 @@ input[type=text]{min-height:56px}
       inp('end','End time (optional)','time',e.end)+
       inp('location','Location (optional)','text',e.location,' placeholder="e.g. Community center"')+
       inp('size','Group size (people)','number',e.size,' required min="1" step="1" inputmode="numeric" placeholder="e.g. 12"')+
-      inp('per','Squish per person (batches)','number',e.per==null?1:e.per,' min="0.5" step="0.5" inputmode="decimal"')+
-      '<label for="'+p+'base">Base type</label><select id="'+p+'base" name="base">'+BASE_TYPES.map(function(b){ return '<option value="'+b.k+'"'+((e.base||'white')===b.k?' selected':'')+'>'+esc(b.label)+'</option>'; }).join('')+'</select>'+
+      '<fieldset class="basepick"><legend>Bases <span class="fhint">Check every base guests will make.</span></legend><ul class="checks">'+basePickList(sel)+'</ul></fieldset>'+
+      '<label for="'+p+'per">Squish per person, for each base<span class="fhint">1 = each guest makes one of every checked base.</span></label><input type="number" id="'+p+'per" name="per" value="'+esc(e.per==null?1:e.per)+'" min="0.5" step="0.5" inputmode="decimal">'+
       '<label for="'+p+'notes">Notes</label><textarea id="'+p+'notes" name="notes" placeholder="Who is coming, what to bring, how it went…">'+esc(e.notes||'')+'</textarea>'+
       '<div class="row"><button class="btn" type="submit">Save event</button>'+(ev?'<button class="btn ghost" type="button" data-ev-cancel="'+esc(ev.id)+'">Cancel</button>':'<button class="btn ghost" type="reset">Clear</button>')+'</div>'+
       '<div class="saved" aria-live="polite" data-ev-formmsg></div></form>';
   }
   function eventCard(ev, isPast){
     var when = fmtDate(ev.date) + (timeRange(ev) ? ' · ' + timeRange(ev) : '');
-    var c = calcEvent(ev);
+    var c = calcEvent(ev), bl = evBases(ev);
     var h = '<div class="card ev'+(isPast?' past':'')+'" data-ev="'+esc(ev.id)+'"><button class="head" aria-expanded="false"><span class="dot evdot" aria-hidden="true">'+(isPast?'🗓️':'📅')+'</span>'+
       '<span class="t"><span class="num">'+(isPast?'Past event':'Upcoming')+'</span><h2>'+esc(ev.name||'Event')+'</h2><span class="sub">'+esc(when)+'<br>'+plural(c.people,'person','people')+'</span></span><span class="chev" aria-hidden="true">⌄</span></button>'+
       '<div class="body"><div class="view">'+
       '<dl class="evinfo"><dt>When</dt><dd>'+esc(when)+'</dd>'+(ev.location?'<dt>Where</dt><dd>'+esc(ev.location)+'</dd>':'')+
-      '<dt>Group</dt><dd>'+plural(c.people,'person','people')+'</dd><dt>Each makes</dt><dd>'+frac(c.per,2)+' '+(c.per>1?'batches':'batch')+'</dd>'+
-      '<dt>Base</dt><dd>'+esc(baseLabel(ev.base))+'</dd></dl>'+
+      '<dt>Group</dt><dd>'+plural(c.people,'person','people')+'</dd><dt>Each makes</dt><dd>'+frac(c.per,2)+' '+(c.per>1?'batches':'batch')+(bl.length>1?' of each base':'')+'</dd>'+
+      '<dt>'+(bl.length>1?'Bases':'Base')+'</dt><dd>'+bl.map(function(k){ return esc(baseLabel(k)); }).join('<br>')+'</dd></dl>'+
       (isPast ? '' : warnHtml(ev)) + needsHtml(ev)+
       '<div class="row"><button type="button" class="btn alt" data-ev-shop="'+esc(ev.id)+'">🛒 Add needs to shopping list</button></div>'+
       '<div class="saved" aria-live="polite" data-ev-msg="'+esc(ev.id)+'"></div>'+
       '<h3><label for="evn-'+safeId(ev.id)+'">Event notes</label></h3><textarea id="evn-'+safeId(ev.id)+'" data-ev-notes="'+esc(ev.id)+'" placeholder="Who is coming, what to bring, how it went…">'+esc(ev.notes||'')+'</textarea>'+
       '<div class="saved" aria-live="polite" data-ev-saved="'+esc(ev.id)+'"></div>'+
+      promoSection(ev)+
       '<div class="row"><button type="button" class="btn ghost" data-ev-edit="'+esc(ev.id)+'">✏️ Edit event</button><button type="button" class="btn danger" data-ev-del="'+esc(ev.id)+'">Delete event</button></div>'+
       '</div><div class="editwrap"></div></div></div>';
     return h;
@@ -1341,18 +1903,22 @@ input[type=text]{min-height:56px}
       '<h2 class="sect">Upcoming</h2>' + (up.length ? up.map(function(e){ return eventCard(e, false); }).join('') : '<p class="emptycat">No upcoming events yet. Tap “Add an event” above.</p>') +
       '<h2 class="sect">Past</h2>' + (past.length ? past.map(function(e){ return eventCard(e, true); }).join('') : '<p class="emptycat">Past events will show up here.</p>');
     openIds.forEach(function(id){ var el = evCardEl(id); if (el) toggle(el, true); });
+    renderGallery();
   }
   function evCardEl(id){ var all = document.querySelectorAll('#event-list .card[data-ev]'); for (var i=0;i<all.length;i++) if (all[i].getAttribute('data-ev')===id) return all[i]; return null; }
   document.getElementById('add-event-body').innerHTML = eventFormHtml(null);
   function readEvForm(f){
-    var g = function(n){ return f.elements[n] ? f.elements[n].value : ''; };
+    var g = function(n){ return f.elements[n] && f.elements[n].value !== undefined ? f.elements[n].value : ''; };
     var size = Math.max(1, Math.floor(+g('size') || 1)), per = +g('per'); if (!(per > 0)) per = 1;
-    return { name:g('name').trim() || 'Squish event', date:g('date'), start:g('start'), end:g('end'), location:g('location').trim(), size:size, per:per, base:g('base') || 'white', notes:g('notes') };
+    var bases = [].map.call(f.querySelectorAll('input[name="bases"]:checked'), function(i){ return i.value; });
+    if (!bases.length) return null;
+    return { name:g('name').trim() || 'Squish event', date:g('date'), start:g('start'), end:g('end'), location:g('location').trim(), size:size, per:per, bases:bases, base:bases[0], notes:g('notes') };
   }
   document.addEventListener('submit', function(e){
     var f = e.target.closest('form[data-ev-form]'); if (!f) return;
     e.preventDefault();
     var id = f.getAttribute('data-ev-form'), v = readEvForm(f);
+    if (!v) { var fm = f.querySelector('[data-ev-formmsg]'); if (fm) fm.textContent = 'Pick at least one base.'; var cb = f.querySelector('input[name="bases"]'); if (cb) cb.focus(); return; }
     if (id === 'new') {
       v.id = 'e' + Date.now(); v.created = Date.now();
       events.push(v); saveEvents(); f.reset();
@@ -1402,7 +1968,13 @@ input[type=text]{min-height:56px}
     var dl = e.target.closest('[data-ev-del]');
     if (dl) {
       var ev3 = findEv(dl.getAttribute('data-ev-del')); if (!ev3) return;
-      if (confirm('Delete the event "'+(ev3.name||'Event')+'"? This cannot be undone.')) { events = events.filter(function(x){ return x.id !== ev3.id; }); saveEvents(); renderEvents(); }
+      var nm = mediaOf(ev3.id).length;
+      if (confirm('Delete the event "'+(ev3.name||'Event')+'"'+(nm ? ' and its '+plural(nm,'promo photo or video','promo photos and videos') : '')+'? This cannot be undone.')) {
+        events = events.filter(function(x){ return x.id !== ev3.id; }); saveEvents();
+        var ids = mediaOf(ev3.id).map(function(m){ return m.id; });
+        if (ids.length) mDelete(ids).then(function(){ mediaList = mediaList.filter(function(m){ return ids.indexOf(m.id) < 0; }); ids.forEach(dropURLs); renderGallery(); renderBackupStatus(); }, function(){});
+        renderEvents();
+      }
     }
   });
   document.addEventListener('input', function(e){
@@ -1434,8 +2006,259 @@ input[type=text]{min-height:56px}
   });
   document.addEventListener('click', function(e){
     var il = e.target.closest('a[data-ideas]');
-    if (il) { e.preventDefault(); showPage('tips'); ideasTa.focus({preventScroll:true}); }
+    if (il) { e.preventDefault(); showPage('tips'); var hd = document.querySelector('header'); if (hd) document.documentElement.style.setProperty('--hdr', (hd.offsetHeight+10)+'px'); document.getElementById('ideas').scrollIntoView({block:'start'}); ideasTa.focus({preventScroll:true}); }
   });
+
+  // ---------- Back up & restore (Batch 3; promo media added in 3b) ----------
+  // File v2: {app, version:2, exportedAt, data:{<every localStorage key starting "silversquish">: raw string},
+  //           media:[{id, ev, kind, type, name, size, caption, created, data:<base64>, thumb:<base64|null>, thumbType}]}
+  // v1 files (no "media") still restore. "silversquish:lastBackup" is phone bookkeeping and is not exported.
+  var BK_APP = 'Silver Squish Squish Book', BK_VERSION = 2, BK_LAST = 'lastBackup';
+  var bkMsgEl = document.getElementById('backup-msg');
+  var bkSumEl = document.getElementById('backup-summary');
+  var bkFile = document.getElementById('backup-file');
+  var bkPending = null, bkReady = null, bkBusy = false;
+  function bkMsg(t, cls){ bkMsgEl.textContent = t; bkMsgEl.className = 'bkmsg' + (cls ? ' '+cls : ''); }
+  function ssKeys(){
+    var out = [];
+    try { for (var i=0;i<localStorage.length;i++){ var k = localStorage.key(i); if (k && k.indexOf('silversquish') === 0) out.push(k); } } catch(e){}
+    return out;
+  }
+  function collectData(){
+    var data = {};
+    ssKeys().forEach(function(k){ if (k === NS+BK_LAST) return; try { var v = localStorage.getItem(k); if (v !== null) data[k] = v; } catch(e){} });
+    return data;
+  }
+  function fmtSize(n){ return n < 1024 ? n+' bytes' : n < 1048576 ? Math.max(1, Math.round(n/1024))+' KB' : (n/1048576).toFixed(1)+' MB'; }
+  function bkFmtDate(iso){
+    var d = new Date(iso); if (isNaN(d)) return 'unknown';
+    try { return d.toLocaleString(undefined, {weekday:'short', month:'short', day:'numeric', year:'numeric', hour:'numeric', minute:'2-digit'}); } catch(e){ return d.toString(); }
+  }
+  function ymd(d){ function p(n){ return (n<10?'0':'')+n; } return d.getFullYear()+'-'+p(d.getMonth()+1)+'-'+p(d.getDate()); }
+  function parseJ(v, d){ try { var x = JSON.parse(v); return x === null || x === undefined ? d : x; } catch(e){ return d; } }
+  function bkPlural(n, w, many){ return n + ' ' + (n === 1 ? w : (many || w+'s')); }
+  function bkCounts(data, media){
+    var c = {notes:0, checks:0, photos:0, recipes:0, bases:0, edits:0, supplies:0, events:0, ideas:false, mPhotos:0, mVideos:0, mBytes:0};
+    Object.keys(data).forEach(function(k){
+      var sub = k.indexOf(NS) === 0 ? k.slice(NS.length) : k, v = data[k];
+      if (sub.indexOf('notes:') === 0) { if (String(parseJ(v, '')).trim()) c.notes++; }
+      else if (sub.indexOf('checks:') === 0) c.checks++;
+      else if (sub.indexOf(PHOTO_KEY) === 0) { if (v) c.photos++; }
+      else if (sub === 'custom') { var a = parseJ(v, []); c.recipes = Array.isArray(a) ? a.length : 0; }
+      else if (sub === CB_KEY) { var cb = parseJ(v, []); c.bases = Array.isArray(cb) ? cb.length : 0; }
+      else if (sub === EDIT_KEY) { var e = parseJ(v, {}); c.edits = (e && typeof e === 'object') ? Object.keys(e).length : 0; }
+      else if (sub === SUP_KEY) { var s = parseJ(v, []); c.supplies = Array.isArray(s) ? s.length : 0; }
+      else if (sub === EV_KEY) { var ev = parseJ(v, []); c.events = Array.isArray(ev) ? ev.length : 0; }
+      else if (sub === 'ideas') { c.ideas = !!String(parseJ(v, '')).trim(); }
+    });
+    (media || []).forEach(function(m){ if (m.kind === 'video') c.mVideos++; else c.mPhotos++; c.mBytes += +m.size || 0; });
+    return c;
+  }
+  // True when there is something worth backing up (an untouched starter supply list doesn't count).
+  function hasUserData(){
+    if (mediaList.length) return true;
+    var data = collectData(), any = false;
+    Object.keys(data).forEach(function(k){
+      if (any) return;
+      var sub = k.slice(NS.length), v = data[k];
+      if (sub === SUP_KEY) {
+        var strip = function(a){ return JSON.stringify((Array.isArray(a)?a:[]).map(function(x){ return [x.name,x.cat,x.qty||'',x.status,x.cost==null?null:x.cost,x.supplier||'']; })); };
+        if (strip(parseJ(v, [])) !== strip(starterSupplies())) any = true;
+      } else if (sub === 'ideas' || sub.indexOf('notes:') === 0) { if (String(parseJ(v, '')).trim()) any = true; }
+      else if (sub === 'custom' || sub === CB_KEY || sub === EV_KEY) { var a = parseJ(v, []); if (Array.isArray(a) && a.length) any = true; }
+      else if (sub === EDIT_KEY) { var e = parseJ(v, {}); if (e && typeof e === 'object' && Object.keys(e).length) any = true; }
+      else if (v) any = true;
+    });
+    return any;
+  }
+  function renderBackupStatus(){
+    var last = get(BK_LAST, '');
+    document.getElementById('backup-last').textContent = 'Last backup: ' + (last ? bkFmtDate(last) : 'never');
+    var rm = document.getElementById('backup-remind'), age = last ? (Date.now() - new Date(last).getTime()) : Infinity;
+    var due = !(age < 7*864e5) && hasUserData();
+    rm.hidden = !due;
+    if (due) document.getElementById('backup-remind-text').textContent = last
+      ? 'Your last backup was ' + Math.floor(age/864e5) + ' days ago. A fresh one keeps your changes safe.'
+      : "You haven't backed up your Squish Book yet. It only takes a moment.";
+  }
+  function markBackedUp(){ set(BK_LAST, new Date().toISOString()); renderBackupStatus(); }
+  function blobToB64(b){
+    return new Promise(function(res, rej){
+      var r = new FileReader();
+      r.onload = function(){ var s = String(r.result); res(s.slice(s.indexOf(',') + 1)); };
+      r.onerror = function(){ rej(r.error || new Error('read')); };
+      r.readAsDataURL(b);
+    });
+  }
+  function b64ToBlob(s, type){
+    var bin = atob(s), n = bin.length, u = new Uint8Array(n);
+    for (var i=0;i<n;i++) u[i] = bin.charCodeAt(i);
+    return new Blob([u], {type:type || ''});
+  }
+  function makeFile(parts, name){
+    try { return new File(parts, name, {type:'application/json'}); }
+    catch(e){ var b = new Blob(parts, {type:'application/json'}); b.name = name; return b; }
+  }
+  function sizeNote(file, c){
+    var n = 'Backup file: ' + fmtSize(file.size) + '.';
+    if (c.mVideos) n += ' Videos make the file much bigger (' + bkPlural(c.mVideos, 'video') + ' included).';
+    else if (c.photos || c.mPhotos) n += ' Photos make the file bigger (' + bkPlural(c.photos + c.mPhotos, 'photo') + ' included).';
+    else n += ' Photos make the file bigger, so it grows as you add them.';
+    if (file.size > 20*1048576) n += ' Email may not send files this big, so choose Save to Files or AirDrop.';
+    return n;
+  }
+  function doBackup(){
+    if (bkBusy) return;
+    bkSumEl.innerHTML = ''; bkPending = null; bkReady = null;
+    var now = new Date(), data = collectData(), name = 'squish-book-backup-' + ymd(now) + '.json';
+    var head = {app:BK_APP, version:BK_VERSION, exportedAt:now.toISOString(), data:data};
+    var media = mediaList.slice(), c = bkCounts(data, media);
+    if (!media.length) {
+      head.media = [];
+      var file = makeFile([JSON.stringify(head, null, 1)], name);
+      shareOrSave(file, sizeNote(file, c));
+      return;
+    }
+    // With promo media the file has to be built first (async), so it is saved with a second tap.
+    bkBusy = true;
+    bkMsg('Getting your backup ready (' + [c.mPhotos ? bkPlural(c.mPhotos, 'promo photo') : '', c.mVideos ? bkPlural(c.mVideos, 'video') : ''].filter(Boolean).join(' and ') + ', about ' + fmtSize(Math.round(c.mBytes * 1.34)) + ')…');
+    var parts = [JSON.stringify(head, null, 1).replace(/\}\s*$/, '') + ',"media":['], seq = Promise.resolve();
+    media.forEach(function(m, i){
+      seq = seq.then(function(){
+        return Promise.all([blobToB64(m.blob), m.thumb ? blobToB64(m.thumb) : null]).then(function(r){
+          parts.push((i ? ',' : '') + JSON.stringify({id:m.id, ev:m.ev, kind:m.kind, type:m.type || '', name:m.name || '', size:m.size || m.blob.size, caption:m.caption || '', created:m.created || 0,
+            data:r[0], thumb:r[1], thumbType:m.thumb ? (m.thumb.type || 'image/jpeg') : null}));
+        });
+      });
+    });
+    seq.then(function(){
+      parts.push(']}');
+      var file = makeFile(parts, name); parts = null;
+      bkReady = {file:file, note:sizeNote(file, c)};
+      bkMsg('');
+      bkSumEl.innerHTML = '<div class="bksum" role="region" aria-label="Backup ready"><h3>Your backup is ready</h3><p>' + esc(bkReady.note) + '</p>' +
+        '<div class="row"><button class="btn" type="button" id="backup-save">💾 Save backup file</button></div></div>';
+      var sb = document.getElementById('backup-save'); if (sb) sb.focus();
+    }, function(){ bkMsg('Sorry, the backup could not be made. Please try again.', 'err'); }).then(function(){ bkBusy = false; });
+  }
+  function shareOrSave(file, note){
+    if (navigator.canShare && navigator.share && navigator.canShare({files:[file]})) {
+      navigator.share({files:[file], title:'Squish Book backup'}).then(function(){
+        markBackedUp(); bkSumEl.innerHTML = ''; bkMsg('Backed up ✓ ' + note, 'ok');
+      }, function(err){
+        if (err && err.name === 'AbortError') bkMsg('Backup not saved. Tap "Back up now" and choose Save to Files, AirDrop, or Mail.', 'err');
+        else if (err && err.name === 'NotAllowedError') {
+          bkReady = {file:file, note:note};
+          bkSumEl.innerHTML = '<div class="bksum"><h3>Your backup is ready</h3><p>' + esc(note) + '</p><div class="row"><button class="btn" type="button" id="backup-save">💾 Save backup file</button></div></div>';
+        } else downloadBackup(file, note);
+      });
+      return;
+    }
+    downloadBackup(file, note);
+  }
+  function downloadBackup(file, note){
+    try {
+      var url = URL.createObjectURL(file);
+      var a = document.createElement('a'); a.href = url; a.download = file.name; a.rel = 'noopener';
+      document.body.appendChild(a); a.click(); a.remove();
+      setTimeout(function(){ URL.revokeObjectURL(url); }, 60000);
+      markBackedUp(); bkSumEl.innerHTML = ''; bkMsg('Saved "' + file.name + '" ✓ ' + note, 'ok');
+    } catch(e){ bkMsg('Sorry, the backup could not be saved on this phone.', 'err'); }
+  }
+  function readBackupFile(f){
+    bkSumEl.innerHTML = ''; bkPending = null; bkReady = null;
+    bkMsg('Opening backup…');
+    var rd = new FileReader();
+    rd.onerror = function(){ bkMsg('Could not open that file.', 'err'); };
+    rd.onload = function(){
+      var b = null; try { b = JSON.parse(rd.result); } catch(e){}
+      if (!b || typeof b !== 'object' || b.app !== BK_APP || !b.data || typeof b.data !== 'object' || Array.isArray(b.data)) {
+        bkMsg("That file isn't a Squish Book backup. Pick a file named squish-book-backup-….json.", 'err'); return;
+      }
+      var data = {};
+      Object.keys(b.data).forEach(function(k){ if (k.indexOf('silversquish') === 0 && k !== NS+BK_LAST && typeof b.data[k] === 'string') data[k] = b.data[k]; });
+      var media = Array.isArray(b.media) ? b.media.filter(function(m){ return m && typeof m.id === 'string' && typeof m.data === 'string' && (m.kind === 'image' || m.kind === 'video'); }) : [];
+      var c = bkCounts(data, media);
+      bkPending = {data:data, media:media, exportedAt:b.exportedAt};
+      bkMsg('');
+      var lose = mediaList.length && !media.length;
+      bkSumEl.innerHTML = '<div class="bksum" role="region" aria-label="Backup summary"><h3>This backup has</h3><ul>' +
+        '<li><span class="k">Saved:</span> ' + esc(b.exportedAt ? bkFmtDate(b.exportedAt) : 'unknown date') + '</li>' +
+        '<li>' + bkPlural(c.notes, 'note') + '</li>' +
+        '<li>' + bkPlural(c.recipes, 'recipe') + ' and ' + bkPlural(c.bases, 'base') + ' you added' + (c.edits ? ', ' + bkPlural(c.edits, 'edited card') : '') + '</li>' +
+        '<li>' + bkPlural(c.supplies, 'supply item') + '</li>' +
+        '<li>' + bkPlural(c.events, 'event') + '</li>' +
+        '<li>' + bkPlural(c.photos, 'recipe photo') + '</li>' +
+        '<li>Promo: ' + bkPlural(c.mPhotos, 'photo') + ', ' + bkPlural(c.mVideos, 'video') + '</li>' +
+        '<li>' + (c.ideas ? 'Your ideas list' : 'No ideas list') + '</li>' +
+        '<li>Size: ' + fmtSize(f.size) + '</li></ul>' +
+        (lose ? '<p class="warn">This backup has no promo photos or videos. The ' + bkPlural(mediaList.length, 'promo item') + ' on this phone will be removed.</p>' : '') +
+        '<p class="q">Replace everything on this phone with this backup?</p>' +
+        '<div class="row"><button class="btn" type="button" id="backup-confirm">Yes, replace</button><button class="btn ghost" type="button" id="backup-cancel">Cancel</button></div></div>';
+      var y = document.getElementById('backup-confirm'); if (y) y.focus({preventScroll:false});
+    };
+    rd.readAsText(f);
+  }
+  function writeAll(data){
+    // Non-photo keys first so the important stuff lands even on a tight phone; photos (biggest) last.
+    var keys = Object.keys(data).sort(function(a,b){ return (a.indexOf(NS+PHOTO_KEY)===0) - (b.indexOf(NS+PHOTO_KEY)===0); });
+    for (var i=0;i<keys.length;i++) localStorage.setItem(keys[i], data[keys[i]]);
+  }
+  function clearSS(){ ssKeys().forEach(function(k){ try { localStorage.removeItem(k); } catch(e){} }); }
+  function restoreFail(full){
+    bkSumEl.innerHTML = '';
+    bkMsg((full ? "This phone ran out of room for the backup (photos and videos take the most space). " : "Something went wrong while restoring. ") +
+      "Nothing was changed. Your Squish Book is just as it was.", 'err');
+  }
+  function doRestore(){
+    if (!bkPending || bkBusy) return;
+    var P = bkPending, recs; bkPending = null;
+    try {
+      recs = P.media.map(function(m){
+        var blob = b64ToBlob(m.data, m.type);
+        return {id:m.id, ev:typeof m.ev === 'string' ? m.ev : '', kind:m.kind, type:m.type || '', name:m.name || '', caption:m.caption || '', created:+m.created || Date.now(),
+          blob:blob, size:blob.size, thumb:(typeof m.thumb === 'string' && m.thumb) ? b64ToBlob(m.thumb, m.thumbType || 'image/jpeg') : null};
+      });
+    } catch(e){ bkSumEl.innerHTML = ''; bkMsg('That backup file looks damaged, so nothing was changed.', 'err'); return; }
+    bkBusy = true; bkMsg('Restoring…');
+    var oldMedia = mediaList.slice(), skipMedia = !mediaOk;
+    // Media first, in one IndexedDB transaction (all or nothing). Then localStorage, rolled back on failure.
+    (skipMedia ? Promise.resolve() : mReplaceAll(recs)).then(function(){
+      var snap = {}; ssKeys().forEach(function(k){ try { snap[k] = localStorage.getItem(k); } catch(e){} });
+      try {
+        clearSS(); writeAll(P.data);
+        localStorage.setItem(NS+BK_LAST, JSON.stringify(P.exportedAt || new Date().toISOString()));
+      } catch(err){
+        try { clearSS(); writeAll(snap); } catch(e2){}
+        var undo = skipMedia ? Promise.resolve() : mReplaceAll(oldMedia);
+        return undo.then(function(){ restoreFail(isQuota(err)); }, function(){ bkSumEl.innerHTML = ''; bkMsg('Something went wrong while restoring. Some promo media may be missing. Please try restoring again.', 'err'); });
+      }
+      bkMsg('Restored ✓' + (skipMedia && recs.length ? ' (promo photos and videos can’t be saved in this browser)' : '') + ' Reloading…', 'ok');
+      setTimeout(function(){ location.hash = 'tips'; location.reload(); }, 600);
+    }, function(err){ restoreFail(isQuota(err) || /quota/i.test(String(err && (err.name + err.message)))); }).then(function(){ bkBusy = false; });
+  }
+  document.getElementById('backup-now').addEventListener('click', doBackup);
+  document.getElementById('backup-remind-go').addEventListener('click', function(){ document.getElementById('backup').scrollIntoView({block:'start'}); doBackup(); });
+  document.getElementById('backup-restore').addEventListener('click', function(){ bkFile.value = ''; bkFile.click(); });
+  bkFile.addEventListener('change', function(){ var f = bkFile.files && bkFile.files[0]; if (f) readBackupFile(f); });
+  bkSumEl.addEventListener('click', function(e){
+    if (e.target.closest('#backup-confirm')) doRestore();
+    else if (e.target.closest('#backup-save')) { if (bkReady) shareOrSave(bkReady.file, bkReady.note); }
+    else if (e.target.closest('#backup-cancel')) { bkSumEl.innerHTML = ''; bkPending = null; bkMsg('Restore cancelled. Nothing changed.'); }
+  });
+  document.querySelector('nav.tabs').addEventListener('click', function(e){
+    if (e.target.closest('button[data-page]')) document.querySelectorAll('video').forEach(function(v){ try { v.pause(); } catch(x){} });
+    var b = e.target.closest('button[data-page="tips"]'); if (b) renderBackupStatus(); });
+  renderBackupStatus();
+
+  // ---------- Featured poster: tap to view full size ----------
+  document.getElementById('poster-link').addEventListener('click', function(e){
+    e.preventDefault();
+    openViewer({kind:'image', src:'media/promo-poster.jpg', alt:'Silver Squish party poster, full size', label:'Party poster, full size', back:this});
+  });
+
+  // Promo media loads from IndexedDB after the page is up.
+  loadMedia().then(function(){ renderEvents(); renderBackupStatus(); });
 
   renderRecipes();
   var start = (location.hash||'').slice(1);

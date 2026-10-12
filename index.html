@@ -1222,11 +1222,14 @@ fieldset.basepick legend,fieldset.calcset legend{font-weight:700;color:var(--bro
   function stateOf(k){ for (var i=0;i<STATES.length;i++) if (STATES[i].k===k) return STATES[i]; return STATES[0]; }
   function starterSupplies(){
     var n = 0, t = Date.now();
-    function it(name, cat){ n++; return {id:'s'+t+'-'+n, name:name, cat:cat, qty:'', status:'in', cost:null, supplier:''}; }
+    function it(name, cat, cost, supplier){ n++; return {id:'s'+t+'-'+n, name:name, cat:cat, qty:'', status:'in', cost:(cost===undefined?null:cost), supplier:supplier||''}; }
     return [
       it("Elmer's clear glue","Bases"), it("Elmer's white glue","Bases"), it("White air-dry clay","Bases"),
       it("Borax","Activators"), it("BAM (40 oz jar)","Activators"),
-      it("Shaving cream","Add-ins"), it("Glitter","Add-ins"), it("Beads","Add-ins"), it("Charms","Add-ins")
+      it("Shaving cream","Add-ins"), it("Glitter","Add-ins"), it("Beads","Add-ins"), it("Charms","Add-ins"),
+      it("Bingsu","Add-ins"), it("Styrofoam beads","Add-ins"),
+      it("Glass Jars 8oz","Tools & Storage", 1, "Target"), it("Plastic Jars 8oz","Tools & Storage", 0.75, "Amazon 36 pack"),
+      it("White spongies","Add-ins"), it("Sprinkles","Add-ins")
     ];
   }
   function parseCost(v){
